@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FineLand - Tìm kiếm bất động sản nhanh chóng</title>
+    <meta
+      name="description"
+      content="Tìm kiếm bất động sản theo nhu cầu với trải nghiệm nhanh, rõ ràng và cập nhật liên tục."
+    />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      #email:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.42);
+      }
+      #signupBtn {
+        transition: filter 150ms ease, box-shadow 150ms ease;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <div class="relative overflow-hidden">
+      <!-- Background gradients + subtle grid -->
+      <div
+        class="absolute inset-0 -z-10 bg-[radial-gradient(900px_circle_at_15%_0%,rgba(16,185,129,.28),transparent_40%),radial-gradient(800px_circle_at_90%_10%,rgba(5,150,105,.22),transparent_45%),radial-gradient(700px_circle_at_50%_100%,rgba(132,204,22,.16),transparent_55%)]"
+      ></div>
+      <div
+        class="absolute inset-0 -z-10 opacity-60 bg-[linear-gradient(to_right,rgba(148,163,184,0.09)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.09)_1px,transparent_1px)] bg-[size:48px_48px]"
+      ></div>
+
+      <header class="mx-auto max-w-6xl px-6 pt-10">
+        <nav class="flex items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div
+              class="h-10 w-10 rounded-xl bg-gradient-to-br from-sky-400/25 to-indigo-400/25 ring-1 ring-white/10 flex items-center justify-center"
+              aria-hidden="true"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10.5Z"
+                  stroke="rgba(226,232,240,0.95)"
+                  stroke-width="1.6"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold leading-tight text-base">FineLand</div>
+              <div class="text-xs text-slate-400">Tìm kiếm bất động sản thông minh</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-end gap-3 text-sm text-slate-300">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">
+              <span class="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span>
+              Cập nhật hằng ngày
+            </span>
+          </div>
+        </nav>
+      </header>
+
+      <main class="mx-auto max-w-6xl px-6 pb-16 pt-10 sm:pt-14">
+        <section class="grid items-center gap-10 lg:grid-cols-2">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">
+              <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span>
+              <span class="text-xs sm:text-sm text-slate-200">Ra quyết định nhanh hơn</span>
+            </div>
+
+            <h1 class="mt-5 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+              Tìm bất động sản phù hợp trong vài phút.
+            </h1>
+
+            <p class="mt-4 text-pretty text-base leading-relaxed text-slate-300 sm:text-lg">
+              FineLand giúp bạn lọc theo vị trí, giá và nhu cầu thực tế. Nhận thông tin mới nhất
+              và những cơ hội phù hợp nhất ngay khi vừa được cập nhật.
+            </p>
+
+            <div class="mt-7 flex flex-wrap items-center gap-3 text-sm text-slate-300">
+              <div class="inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-2 ring-1 ring-white/10">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 6L9 17l-5-5"
+                    stroke="rgba(134,239,172,0.95)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Lọc nhanh theo nhu cầu
+              </div>
+              <div class="inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-2 ring-1 ring-white/10">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"
+                    stroke="rgba(96,165,250,0.95)"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Thông tin cập nhật liên tục
+              </div>
+            </div>
+          </div>
+
+          <!-- Signup card -->
+          <div>
+            <div class="rounded-3xl bg-slate-900/60 p-1 ring-1 ring-white/10 shadow-glow backdrop-blur">
+              <div class="rounded-[2rem] bg-gradient-to-b from-white/10 to-transparent p-6 sm:p-8">
+                <h2 class="text-xl font-semibold">Nhận tin tức phù hợp qua Email</h2>
+                <p class="mt-2 text-sm text-slate-300">
+                  Đăng ký để nhận danh sách cập nhật theo khu vực bạn quan tâm.
+                </p>
+
+                <form id="signupForm" class="mt-6">
+                  <label for="email" class="sr-only">Email</label>
+                  <div class="flex flex-col gap-3 sm:flex-row sm:items-stretch">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      placeholder="Email của bạn"
+                      required
+                      class="w-full rounded-2xl bg-slate-950/40 px-4 py-3 text-slate-100 placeholder:text-slate-400 ring-1 ring-white/10 outline-none"
+                    />
+                    <button
+                      id="signupBtn"
+                      type="submit"
+                      class="inline-flex w-full justify-center rounded-2xl px-5 py-3 font-medium text-white ring-1 ring-white/10 transition hover:brightness-105 focus:outline-none sm:w-auto"
+                      style="
+                        background-image: linear-gradient(to right, #10b981, #84cc16);
+                        box-shadow: 0 14px 40px rgba(16, 185, 129, .22);
+                      "
+                    >
+                      Đăng ký nhận tin
+                    </button>
+                  </div>
+
+                  <p class="mt-3 text-xs text-slate-400">
+                    Không spam. Bạn có thể hủy bất kỳ lúc nào.
+                  </p>
+
+                  <div
+                    id="formStatus"
+                    class="mt-4 hidden rounded-2xl bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200 ring-1 ring-emerald-500/20"
+                    role="status"
+                    aria-live="polite"
+                  ></div>
+                </form>
+              </div>
+            </div>
+
+            <div class="mt-5 text-xs text-slate-500">
+              Bằng việc đăng ký, bạn đồng ý nhận email từ FineLand.
+            </div>
+          </div>
+        </section>
+
+        <!-- Giao diện (HTML): Section tính lợi nhuận dự kiến -->
+        <section class="mt-10 rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10 sm:p-8">
+          <h2 class="text-2xl font-semibold sm:text-3xl">Tính Lợi Nhuận Dự Kiến</h2>
+          <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <label for="propertyPrice" class="sr-only">Giá mua bất động sản (VND)</label>
+            <input
+              id="propertyPrice"
+              type="number"
+              min="0"
+              placeholder="Giá mua bất động sản (VND)"
+              class="w-full rounded-2xl bg-slate-950/40 px-4 py-3 text-slate-100 placeholder:text-slate-400 ring-1 ring-white/10 outline-none"
+            />
+            <button
+              id="calculateProfitBtn"
+              type="button"
+              class="inline-flex justify-center rounded-2xl bg-gradient-to-r from-emerald-500 to-lime-500 px-5 py-3 font-medium text-white ring-1 ring-white/10 transition hover:brightness-105 focus:outline-none sm:w-auto"
+            >
+              Tính Ngay
+            </button>
+          </div>
+          <div
+            id="profitResult"
+            class="mt-4 rounded-2xl bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200 ring-1 ring-emerald-500/20"
+          >
+            Kết quả lợi nhuận dự kiến (10%): 0 VND
+          </div>
+        </section>
+
+        <footer
+          class="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center"
+        >
+          <div class="text-sm text-slate-500">
+            © <span id="year"></span> FineLand. Tìm kiếm bất động sản nhanh chóng.
+          </div>
+          <div class="flex items-center gap-3 text-sm">
+            <a href="#" class="text-slate-400 hover:text-slate-200">Điều khoản</a>
+            <span class="text-slate-700/60" aria-hidden="true">•</span>
+            <a href="#" class="text-slate-400 hover:text-slate-200">Chính sách</a>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script>
+      const yearEl = document.getElementById("year");
+      yearEl.textContent = new Date().getFullYear();
+
+      const form = document.getElementById("signupForm");
+      const statusEl = document.getElementById("formStatus");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email").value.trim();
+
+        // Demo UI only (no real backend request yet)
+        statusEl.textContent = `Cảm ơn! Email ${email} đã sẵn sàng để nhận tin.`;
+        statusEl.classList.remove("hidden");
+        statusEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        form.reset();
+      });
+
+      // Logic (JS): Tính lợi nhuận dự kiến = giá mua * 0.1 khi nhấn nút "Tính Ngay"
+      const propertyPriceInput = document.getElementById("propertyPrice");
+      const calculateProfitBtn = document.getElementById("calculateProfitBtn");
+      const profitResult = document.getElementById("profitResult");
+
+      calculateProfitBtn.addEventListener("click", () => {
+        const purchasePrice = Number(propertyPriceInput.value) || 0;
+        const estimatedProfit = purchasePrice * 0.1;
+
+        profitResult.textContent = `Kết quả lợi nhuận dự kiến (10%): ${estimatedProfit.toLocaleString("vi-VN")} VND`;
+      });
+    </script>
+  </body>
+</html>
