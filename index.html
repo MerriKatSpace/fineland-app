@@ -16,7 +16,7 @@
         theme: {
           extend: {
             boxShadow: {
-              glow: "0 0 0 1px rgba(56,189,248,.18), 0 18px 60px rgba(0,0,0,.45)",
+              glow: "0 0 0 1px rgba(52,211,153,.2), 0 18px 60px rgba(0,0,0,.45)",
             },
           },
         },
@@ -28,7 +28,7 @@
     <div class="relative overflow-hidden">
       <!-- Background gradients + subtle grid -->
       <div
-        class="absolute inset-0 -z-10 bg-[radial-gradient(900px_circle_at_15%_0%,rgba(56,189,248,.28),transparent_40%),radial-gradient(800px_circle_at_90%_10%,rgba(99,102,241,.22),transparent_45%),radial-gradient(700px_circle_at_50%_100%,rgba(16,185,129,.16),transparent_55%)]"
+        class="absolute inset-0 -z-10 bg-[radial-gradient(900px_circle_at_15%_0%,rgba(52,211,153,.22),transparent_40%),radial-gradient(800px_circle_at_90%_10%,rgba(20,184,166,.18),transparent_45%),radial-gradient(700px_circle_at_50%_100%,rgba(22,163,74,.14),transparent_55%)]"
       ></div>
       <div
         class="absolute inset-0 -z-10 opacity-60 bg-[linear-gradient(to_right,rgba(148,163,184,0.09)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.09)_1px,transparent_1px)] bg-[size:48px_48px]"
@@ -38,7 +38,7 @@
         <nav class="flex items-center justify-between">
           <div class="flex items-center gap-3">
             <div
-              class="h-10 w-10 rounded-xl bg-gradient-to-br from-sky-400/25 to-indigo-400/25 ring-1 ring-white/10 flex items-center justify-center"
+              class="h-10 w-10 rounded-xl bg-gradient-to-br from-emerald-400/25 to-teal-600/20 ring-1 ring-white/10 flex items-center justify-center"
               aria-hidden="true"
             >
               <svg
@@ -75,21 +75,20 @@
         <section class="grid items-center gap-10 lg:grid-cols-2">
           <div>
             <div class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">
-              <span class="inline-flex h-2 w-2 rounded-full bg-sky-400" aria-hidden="true"></span>
-              <span class="text-xs sm:text-sm text-slate-200">Ra quyết định nhanh hơn</span>
+              <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span>
+              <span class="text-xs sm:text-sm text-slate-200">Chỉ cần 1 phút</span>
             </div>
 
             <h1 class="mt-5 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-              Tìm bất động sản phù hợp trong vài phút.
+              Tính toán tiềm năng đầu tư
             </h1>
 
             <p class="mt-4 text-pretty text-base leading-relaxed text-slate-300 sm:text-lg">
-              FineLand giúp bạn lọc theo vị trí, giá và nhu cầu thực tế. Nhận thông tin mới nhất
-              và những cơ hội phù hợp nhất ngay khi vừa được cập nhật.
+              Không cần chờ chuyên gia tư vấn.
             </p>
 
             <div class="mt-7 flex flex-wrap items-center gap-3 text-sm text-slate-300">
-              <div class="inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-2 ring-1 ring-white/10">
+              <div class="inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-2">
                 <svg
                   width="16"
                   height="16"
@@ -106,9 +105,9 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                Lọc nhanh theo nhu cầu
+                Đầu tư theo nhu cầu
               </div>
-              <div class="inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-2 ring-1 ring-white/10">
+              <div class="inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-2">
                 <svg
                   width="16"
                   height="16"
@@ -119,7 +118,7 @@
                 >
                   <path
                     d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"
-                    stroke="rgba(96,165,250,0.95)"
+                    stroke="rgba(52,211,153,0.95)"
                     stroke-width="2"
                     stroke-linejoin="round"
                   />
@@ -131,7 +130,7 @@
 
           <!-- Signup card -->
           <div>
-            <div class="rounded-3xl bg-slate-900/60 p-1 ring-1 ring-white/10 shadow-glow backdrop-blur">
+            <div class="rounded-3xl bg-slate-900/60 p-1 backdrop-blur">
               <div class="rounded-[2rem] bg-gradient-to-b from-white/10 to-transparent p-6 sm:p-8">
                 <h2 class="text-xl font-semibold">Nhận tin tức phù hợp qua Email</h2>
                 <p class="mt-2 text-sm text-slate-300">
@@ -148,11 +147,11 @@
                       autocomplete="email"
                       placeholder="Email của bạn"
                       required
-                      class="w-full rounded-2xl bg-slate-950/40 px-4 py-3 text-slate-100 placeholder:text-slate-400 ring-1 ring-white/10 outline-none focus:ring-2 focus:ring-sky-400/60"
+                      class="w-full rounded-2xl bg-slate-950/40 px-4 py-3 text-slate-100 placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-emerald-400/60"
                     />
                     <button
                       type="submit"
-                      class="inline-flex w-full justify-center rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-500 px-5 py-3 font-medium text-white shadow-lg shadow-sky-500/20 ring-1 ring-white/10 transition hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-sky-400/70 sm:w-auto"
+                      class="inline-flex w-full justify-center rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-700 px-5 py-3 font-medium text-white shadow-lg shadow-emerald-900/25 transition hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-emerald-400/70 sm:w-auto"
                     >
                       Đăng ký nhận tin
                     </button>
@@ -180,31 +179,97 @@
 
         <!-- Giao diện (HTML): Thu chi & lợi nhuận năm đầu — Annuity / Dư nợ giảm dần + bảng 12 tháng -->
         <section
-          class="mt-10 rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10 shadow-glow backdrop-blur sm:p-8"
+          class="investor-calc-section mt-10 p-5 sm:p-8"
           aria-labelledby="investorCalcHeading"
         >
           <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h2 id="investorCalcHeading" class="text-2xl font-semibold sm:text-3xl">
-                Dự tính lợi nhuận đầu tư căn hộ
+              <h2 id="investorCalcHeading" class="text-2xl font-semibold tracking-tight text-[#f4faf7] sm:text-3xl">
+                Dự tính lợi nhuận đầu tư
               </h2>
-              <p class="mt-2 max-w-2xl text-sm text-slate-400">
-                Ước lượng thu chi và lợi nhuận theo thời gian đầu tư dự kiến (mặc định bằng kỳ hạn vay nếu để trống),
-                với lãi suất cố định rồi lãi các năm tiếp theo trong phần còn lại của kỳ vay. Chọn trả góp đều hoặc
-                gốc chia đều. Một số chỉ số bán (thuế, môi giới) là mặc định đơn giản; chưa trừ đủ mọi chi phí thực
-                tế.
+              <p class="mt-2 max-w-2xl text-sm leading-relaxed text-[#d4e8de]/85">
+                Nhập giá mua, giá bán dự tính, nhận ngay báo cáo lợi nhuận dự kiến chỉ với 3 bước.
               </p>
             </div>
           </div>
 
-          <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10">
-              <label for="aptPurchasePrice" class="block text-sm font-medium text-slate-200">
-                Giá mua căn hộ
-              </label>
-              <p class="mt-1 text-xs text-slate-500"></p>
+          <nav class="mt-8" aria-label="Quy trình 3 bước">
+            <ol
+              class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch sm:justify-between sm:gap-3"
+            >
+              <li
+                class="flex min-w-0 flex-1 items-start gap-3 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 px-4 py-3 sm:min-h-[4.5rem]"
+              >
+                <span
+                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-700 text-sm font-bold text-white shadow-md shadow-emerald-950/35"
+                  >1</span
+                >
+                <div class="min-w-0 pt-0.5">
+                  <p class="text-sm font-semibold text-[#f0faf5]">Nhập khoản đầu tư</p>
+                  <p class="mt-0.5 text-xs leading-relaxed text-[#c5dfd0]/85">
+                    Giá mua, cho thuê, hạn mức vay, lãi suất, kỳ hạn…
+                  </p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-1 items-start gap-3 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 px-4 py-3 sm:min-h-[4.5rem]"
+              >
+                <span
+                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-600 to-teal-700 text-sm font-bold text-white shadow-md shadow-emerald-950/35"
+                  >2</span
+                >
+                <div class="min-w-0 pt-0.5">
+                  <p class="text-sm font-semibold text-[#f0faf5]">Tính toán</p>
+                  <p class="mt-0.5 text-xs leading-relaxed text-[#c5dfd0]/85">Bấm để chạy mô hình lợi nhuận.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-1 items-start gap-3 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 px-4 py-3 sm:min-h-[4.5rem]"
+              >
+                <span
+                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-600/95 to-teal-800 text-sm font-bold text-white shadow-md shadow-emerald-950/35"
+                  >3</span
+                >
+                <div class="min-w-0 pt-0.5">
+                  <p class="text-sm font-semibold text-[#f0faf5]">Kết quả &amp; So sánh</p>
+                  <p class="mt-0.5 text-xs leading-relaxed text-[#c5dfd0]/85">
+                    Tỷ suất, thu chi, lịch trả nợ, nhận báo cáo PDF (tuỳ chọn).
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </nav>
+
+          <div
+            id="investor-step-1"
+            class="mt-8 space-y-6 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 p-4 sm:p-5"
+          >
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wide text-emerald-300/80">Bước 1 · Nhập khoản đầu tư</p>
+              <p class="mt-1 max-w-2xl text-sm leading-relaxed text-emerald-100/70">
+                Điền số liệu của dự án và kế hoạch đầu tư.
+              </p>
+            </div>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="aptPurchasePrice" class="block text-sm font-medium text-emerald-50/95">
+                  Giá mua dự án
+                </label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Tổng giá mua căn/đất theo hợp đồng (VNĐ). Dùng để tính vốn tự có và quy đổi hạn mức vay khi bạn nhập %."
+                  aria-label="Giải thích: Giá mua dự án"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
+              <p id="aptPurchaseFieldHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="aptPurchasePrice"
@@ -213,23 +278,35 @@
                   autocomplete="off"
                   placeholder="Ví dụ: 50.000.000"
                   class="js-vn-number min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
-                  aria-describedby="aptPurchasePriceSuffix"
+                  aria-describedby="aptPurchaseFieldHint aptPurchasePriceSuffix"
                 />
                 <span
                   id="aptPurchasePriceSuffix"
-                  class="flex shrink-0 items-center border-l border-white/10 bg-slate-950/60 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >VNĐ</span>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10">
-              <label for="aptMonthlyRent" class="block text-sm font-medium text-slate-200">
-                Giá cho thuê dự kiến / tháng
-              </label>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="aptMonthlyRent" class="block text-sm font-medium text-emerald-50/95">
+                  Giá cho thuê dự kiến / tháng
+                </label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Doanh thu cho thuê một tháng. Mô hình nhân với số tháng đầu tư để ước tính tổng thuê (thuế TNCN trên bán nhà được tính riêng ở kết quả)."
+                  aria-label="Giải thích: Giá cho thuê dự kiến"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
               <p class="mt-1 text-xs text-slate-500"></p>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="aptMonthlyRent"
@@ -242,19 +319,29 @@
                 />
                 <span
                   id="aptMonthlyRentSuffix"
-                  class="flex shrink-0 items-center border-l border-white/10 bg-slate-950/60 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >VNĐ</span>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10">
-              <label for="loanLimitValue" class="block text-sm font-medium text-slate-200">
-                Hạn mức vay
-              </label>
-              <p id="loanLimitFieldHint" class="mt-1 text-xs text-slate-500"></p>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="loanLimitValue" class="block text-sm font-medium text-emerald-50/95">Hạn mức vay</label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Mức vay tối đa: nhập % theo giá mua hoặc số tiền VNĐ. Ngân hàng quy đổi thành gốc vay để tính lãi và lịch trả nợ."
+                  aria-label="Giải thích: Hạn mức vay"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
+              <p id="loanLimitFieldHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="loanLimitValue"
@@ -266,7 +353,7 @@
                   aria-describedby="loanLimitFieldHint"
                 />
                 <div
-                  class="relative flex shrink-0 items-stretch border-l border-white/10 bg-slate-950/60"
+                  class="relative flex shrink-0 items-stretch bg-[#050f0c]/90"
                 >
                   <select
                     id="loanLimitUnit"
@@ -310,13 +397,23 @@
             Phần còn lại của kỳ hạn vay dùng Lãi suất các năm tiếp theo (subsequentAnnualRate); nếu trống thì trùng lãi cố định.
           -->
           <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10">
-              <label for="bankAnnualRate" class="block text-sm font-medium text-slate-200">
-                Lãi suất cố định
-              </label>
-              <p class="mt-1 text-xs text-slate-500"></p>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="bankAnnualRate" class="block text-sm font-medium text-emerald-50/95">Lãi suất cố định</label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Lãi suất năm áp dụng trong giai đoạn đầu của khoản vay (giai đoạn lãi cố định)."
+                  aria-label="Giải thích: Lãi suất cố định"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
+              <p id="bankAnnualRateHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="bankAnnualRate"
@@ -324,24 +421,34 @@
                   inputmode="decimal"
                   autocomplete="off"
                   placeholder="Ví dụ: 10,5"
-                  class="js-vn-number min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
-                  aria-describedby="bankAnnualRateSuffix"
+                  class="js-vn-number js-vn-percent min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  aria-describedby="bankAnnualRateHint bankAnnualRateSuffix"
                 />
                 <span
                   id="bankAnnualRateSuffix"
-                  class="flex shrink-0 items-center border-l border-white/10 bg-slate-950/60 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >%</span>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10">
-              <label for="fixedRateTermValue" class="block text-sm font-medium text-slate-200">
-                Thời gian lãi suất cố định
-              </label>
-              <p class="mt-1 text-xs text-slate-500"></p>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="fixedRateTermValue" class="block text-sm font-medium text-emerald-50/95">Thời gian lãi suất cố định</label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Độ dài giai đoạn áp lãi cố định (tháng hoặc năm). Sau giai đoạn này, mô hình dùng ô “Lãi suất các năm tiếp theo” (nếu trống thì giữ nguyên lãi cố định)."
+                  aria-label="Giải thích: Thời gian lãi suất cố định"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
+              <p id="fixedRateFieldHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="fixedRateTermValue"
@@ -350,9 +457,10 @@
                   autocomplete="off"
                   placeholder="Ví dụ: 5"
                   class="js-vn-number js-vn-term min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  aria-describedby="fixedRateFieldHint"
                 />
                 <div
-                  class="relative flex shrink-0 items-stretch border-l border-white/10 bg-slate-950/60"
+                  class="relative flex shrink-0 items-stretch bg-[#050f0c]/90"
                 >
                   <select
                     id="fixedRateTermUnit"
@@ -390,13 +498,23 @@
               </div>
             </div>
 
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10 sm:col-span-2 xl:col-span-1">
-              <label for="subsequentAnnualRate" class="block text-sm font-medium text-slate-200">
-                Lãi suất các năm tiếp theo
-              </label>
-              <p class="mt-1 text-xs text-slate-500"></p>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5 sm:col-span-2 xl:col-span-1">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="subsequentAnnualRate" class="block text-sm font-medium text-emerald-50/95">Lãi suất các năm tiếp theo</label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Lãi năm sau khi hết giai đoạn lãi cố định. Để trống = dùng cùng mức lãi cố định cho phần còn lại của kỳ hạn."
+                  aria-label="Giải thích: Lãi suất các năm tiếp theo"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
+              <p id="subsequentAnnualRateHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="subsequentAnnualRate"
@@ -404,12 +522,12 @@
                   inputmode="decimal"
                   autocomplete="off"
                   placeholder="Ví dụ: 12"
-                  class="js-vn-number min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
-                  aria-describedby="subsequentAnnualRateSuffix"
+                  class="js-vn-number js-vn-percent min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50"
+                  aria-describedby="subsequentAnnualRateHint subsequentAnnualRateSuffix"
                 />
                 <span
                   id="subsequentAnnualRateSuffix"
-                  class="flex shrink-0 items-center border-l border-white/10 bg-slate-950/60 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >%</span>
               </div>
@@ -417,14 +535,27 @@
           </div>
 
           <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10">
-              <label for="loanTermValue" class="block text-sm font-medium text-slate-200">Kỳ hạn vay</label>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="loanTermValue" class="block text-sm font-medium text-emerald-50/95">Kỳ hạn vay</label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Tổng thời gian trả nợ (tháng hoặc năm, quy đổi ra tháng). Bắt buộc khi có vay để tính lịch gốc/lãi."
+                  aria-label="Giải thích: Kỳ hạn vay"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
+              <p id="loanTermFieldHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <!--
                 Gợi ý (chỉ trong mã nguồn, không hiển thị trên trang):
-                Trong công thức, n là số tháng. Chọn tháng hoặc năm ở góc phải — năm được quy đổi ×12 khi tính (tối đa 600 tháng).
+                Trong công thức, n là số tháng. Chọn tháng hoặc năm ở góc phải — năm được quy đổi ×12 khi tính (tối đa 50 năm / 600 tháng).
               -->
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="loanTermValue"
@@ -433,9 +564,10 @@
                   autocomplete="off"
                   placeholder="Ví dụ: 240 (bắt buộc khi có vay)"
                   class="js-vn-number js-vn-term min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  aria-describedby="loanTermFieldHint"
                 />
                 <div
-                  class="relative flex shrink-0 items-stretch border-l border-white/10 bg-slate-950/60"
+                  class="relative flex shrink-0 items-stretch bg-[#050f0c]/90"
                 >
                   <select
                     id="loanTermUnit"
@@ -472,12 +604,22 @@
                 </div>
               </div>
             </div>
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10 sm:col-span-2 lg:col-span-2">
-              <label for="loanRepaymentMode" class="block text-sm font-medium text-slate-200">
-                Phương thức trả nợ
-              </label>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5 sm:col-span-2 lg:col-span-2">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="loanRepaymentMode" class="block text-sm font-medium text-emerald-50/95">Phương thức trả nợ</label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Annuity: gốc+lãi hàng tháng gần cố định, dư nợ giảm dần. Dư nợ giảm dần: gốc chia đều, lãi tính trên dư nợ còn lại."
+                  aria-label="Giải thích: Phương thức trả nợ"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <select
                   id="loanRepaymentMode"
@@ -491,7 +633,7 @@
                   </option>
                 </select>
                 <span
-                  class="pointer-events-none flex shrink-0 items-center border-l border-white/10 bg-slate-950/60 px-3 text-sm leading-none text-slate-200"
+                  class="pointer-events-none flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm leading-none text-slate-200"
                   aria-hidden="true"
                 >
                   <svg
@@ -520,13 +662,23 @@
             Giá bán dự kiến, Tỷ lệ trả nợ trước hạn: dùng trong chỉ số kết quả (phí trước hạn = tỷ lệ × dư nợ cuối kỳ).
           -->
           <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10">
-              <label for="investmentHorizonValue" class="block text-sm font-medium text-slate-200">
-                Thời gian đầu tư dự kiến
-              </label>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="investmentHorizonValue" class="block text-sm font-medium text-emerald-50/95">Thời gian đầu tư dự kiến</label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Thời gian bạn giữ BĐS trước khi bán/tất toán. Để trống = dùng cả kỳ hạn vay. Ảnh hưởng thu cho thuê tích lũy và mốc phí trả nợ trước hạn trong mô hình."
+                  aria-label="Giải thích: Thời gian đầu tư dự kiến"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
               <p class="mt-1 text-xs text-slate-500"></p>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="investmentHorizonValue"
@@ -537,7 +689,7 @@
                   class="js-vn-number js-vn-term min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                 />
                 <div
-                  class="relative flex shrink-0 items-stretch border-l border-white/10 bg-slate-950/60"
+                  class="relative flex shrink-0 items-stretch bg-[#050f0c]/90"
                 >
                   <select
                     id="investmentHorizonUnit"
@@ -575,75 +727,131 @@
               </div>
             </div>
 
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10">
-              <label for="expectedSalePrice" class="block text-sm font-medium text-slate-200">
-                Giá bán dự kiến
-              </label>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="expectedSalePrice" class="block text-sm font-medium text-emerald-50/95">Giá bán dự kiến</label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Giá thoát vốn khi bán. Dùng trong lợi nhuận và các khoản % mặc định (thuế TNCN, phí môi giới) theo công thức hiển thị ở bảng kết quả."
+                  aria-label="Giải thích: Giá bán dự kiến"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
               <p class="mt-1 text-xs text-slate-500"></p>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="expectedSalePrice"
                   type="text"
                   inputmode="decimal"
                   autocomplete="off"
-                  placeholder="Ví dụ: 60.000.000"
+                  placeholder="Ví dụ: 50.000.000"
                   class="js-vn-number min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                   aria-describedby="expectedSalePriceSuffix"
                 />
                 <span
                   id="expectedSalePriceSuffix"
-                  class="flex shrink-0 items-center border-l border-white/10 bg-slate-950/60 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >VNĐ</span>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-slate-950/35 p-5 ring-1 ring-white/10 sm:col-span-2 lg:col-span-1">
-              <label for="earlyRepaymentFeeRate" class="block text-sm font-medium text-slate-200">
-                Tỷ lệ trả nợ trước hạn
-              </label>
-              <p class="mt-1 text-xs text-slate-500"></p>
+            <div class="rounded-2xl bg-black/25 p-4 sm:p-5 sm:col-span-2 lg:col-span-1">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <label for="earlyRepaymentFeeRate" class="block text-sm font-medium text-emerald-50/95">Tỷ lệ trả nợ trước hạn</label>
+                <button
+                  type="button"
+                  class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/85 outline-none transition hover:bg-emerald-500/20 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/50"
+                  title="Ước tính phí/tổn thất khi tất toán sớm: mô hình nhân % này với dư nợ cuối kỳ tại mốc bán/đầu tư (xem bảng chi tiết)."
+                  aria-label="Giải thích: Tỷ lệ trả nợ trước hạn"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                </button>
+              </div>
+              <p id="earlyRepaymentFeeRateHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex overflow-hidden rounded-xl bg-slate-950/50 ring-1 ring-white/10 focus-within:ring-2 focus-within:ring-sky-400/60"
+                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="earlyRepaymentFeeRate"
                   type="text"
                   inputmode="decimal"
                   autocomplete="off"
-                  placeholder="Ví dụ: 3"
-                  class="js-vn-number min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
-                  aria-describedby="earlyRepaymentFeeRateSuffix"
+                  placeholder="Ví dụ: 2"
+                  class="js-vn-number js-vn-percent min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  aria-describedby="earlyRepaymentFeeRateHint earlyRepaymentFeeRateSuffix"
                 />
                 <span
                   id="earlyRepaymentFeeRateSuffix"
-                  class="flex shrink-0 items-center border-l border-white/10 bg-slate-950/60 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >%</span>
               </div>
             </div>
           </div>
-
-          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <button
-              id="deepCalcBtn"
-              type="button"
-              class="inline-flex w-full justify-center rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 ring-1 ring-white/10 transition hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-sky-400/70 sm:w-auto"
-            >
-              Tính Toán Lời Lỗ
-            </button>
           </div>
 
           <div
-            id="deepCalcResults"
-            class="mt-6 rounded-2xl bg-slate-950/30 p-5 ring-1 ring-white/10"
-            role="region"
-            aria-live="polite"
-            aria-label="Kết quả tính toán"
+            id="investor-step-2"
+            class="mt-8 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 p-4 sm:p-6"
           >
-            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-400">Kết quả</h3>
+            <p class="text-sm font-semibold uppercase tracking-wide text-emerald-300/80">Bước 2 · Tính toán</p>
+            <p class="mt-1 max-w-2xl text-sm leading-relaxed text-emerald-100/75">
+              Khi đã điền các ô ở bước 1, bấm nút dưới đây để xem kết quả ở bước 3.
+            </p>
+            <div class="mt-4 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+              <button
+                id="deepCalcBtn"
+                type="button"
+                class="inline-flex min-h-[3.25rem] w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-600 via-emerald-600 to-teal-600 px-6 py-4 text-base font-bold tracking-tight text-white shadow-xl shadow-emerald-950/50 transition hover:from-emerald-500 hover:via-emerald-600 hover:to-teal-500 hover:shadow-emerald-900/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 active:scale-[0.99] sm:w-auto sm:min-w-[15rem] sm:text-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 opacity-95"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  />
+                </svg>
+                Bấm để tính
+              </button>
+            </div>
+            <p
+              id="investorLoanPrereqBanner"
+              class="mt-4 hidden rounded-xl border border-amber-500/30 bg-amber-950/40 px-4 py-3 text-sm leading-relaxed text-amber-100 ring-1 ring-amber-500/35"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <div
+            id="investor-step-3"
+            class="mt-8 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 p-4 sm:p-6"
+          >
+            <p class="text-sm font-semibold uppercase tracking-wide text-emerald-300/80">Bước 3 · Kết quả &amp; So sánh</p>
+            <div
+              id="deepCalcResults"
+              class="mt-4"
+              role="region"
+              aria-live="polite"
+              aria-label="Kết quả tính toán và so sánh"
+            >
+            <h3 class="sr-only">Kết quả &amp; So sánh</h3>
             <p
               id="investorCalcAlert"
               class="mt-4 hidden rounded-xl px-4 py-3 text-sm font-medium ring-1"
@@ -656,15 +864,15 @@
               Lợi nhuận = (giá bán + doanh thu cho thuê) − (giá mua + lãi trả + phí trước hạn + thuế TNCN + phí môi giới).
             -->
             <dl class="mt-4 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-xl bg-emerald-500/5 px-4 py-4 ring-1 ring-emerald-500/15">
-                <dt class="text-xs text-slate-400">Tỷ suất lợi nhuận</dt>
+              <div class="rounded-xl bg-black/20 px-4 py-4">
+                <dt class="text-xs text-emerald-200/70">Tỷ suất lợi nhuận</dt>
                 <dd id="resultTopProfitRate" class="mt-1 text-lg font-semibold text-slate-200">—</dd>
                 <p id="resultTopProfitRateHint" class="mt-2 text-xs text-slate-500">
                   Áp dụng sau khi bấm tính toán.
                 </p>
               </div>
-              <div class="rounded-xl bg-sky-500/5 px-4 py-4 ring-1 ring-sky-500/15">
-                <dt class="text-xs text-slate-400">Lợi nhuận (theo thời gian đầu tư)</dt>
+              <div class="rounded-xl bg-black/20 px-4 py-4">
+                <dt class="text-xs text-teal-100/80">Lợi nhuận (theo thời gian đầu tư)</dt>
                 <dd id="resultRoiAnnual" class="mt-1 text-lg font-semibold text-slate-200">—</dd>
                 <p id="resultRoiHint" class="mt-2 text-xs text-slate-500">
                   Áp dụng sau khi bấm tính toán.
@@ -674,31 +882,72 @@
 
             <div
               id="resultYear1Breakdown"
-              class="mt-6 hidden rounded-xl bg-slate-950/25 p-4 ring-1 ring-white/10"
+              class="mt-6 hidden rounded-xl bg-black/20 p-4"
               aria-label="Chỉ số theo thời gian đầu tư"
             >
-              <h4 class="text-xs font-semibold uppercase tracking-wide text-slate-400">
+              <h4 class="text-xs font-semibold uppercase tracking-wide text-emerald-200/75">
                 Chỉ số theo thời gian đầu tư
               </h4>
-              <dl class="mt-3 text-sm text-slate-300">
+              <p class="mt-2 text-xs leading-relaxed text-emerald-100/55">
+                “Chi phí khác” trong tư vấn thường gồm phí công chứng, quản lý… — ở mô hình demo này không có ô
+                riêng; các khoản điển hình đã phản ánh qua lãi vay, phí trả nợ trước hạn, thuế TNCN và phí môi giới
+                trong bảng dưới (bạn có thể tự cộng thêm ngoài bảng khi ra quyết định).
+              </p>
+              <dl class="mt-4 text-sm text-slate-300">
                 <div class="grid gap-6 sm:grid-cols-2">
                   <div class="flex flex-col gap-3">
                     <div
                       class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                     >
-                      <dt class="text-slate-400">Thu chi (theo thời gian đầu tư):</dt>
+                      <dt class="flex min-w-0 items-center gap-1 text-slate-400">
+                        <span class="min-w-0">Thu chi (theo thời gian đầu tư):</span>
+                        <button
+                          type="button"
+                          class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/75 outline-none hover:bg-emerald-500/15 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/45"
+                          title="Doanh thu cho thuê tích lũy trong thời gian đầu tư trừ tổng gốc và lãi đã trả trong cùng khoảng (min với kỳ hạn vay)."
+                          aria-label="Giải thích: Thu chi"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3.5 w-3.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                          </svg>
+                        </button>
+                      </dt>
                       <dd id="resultInvThuChi" class="font-medium tabular-nums text-slate-100">—</dd>
                     </div>
                     <div
                       class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                     >
-                      <dt class="text-slate-400">Doanh thu cho thuê:</dt>
+                      <dt class="flex min-w-0 items-center gap-1 text-slate-400">
+                        <span class="min-w-0">Doanh thu cho thuê:</span>
+                        <button
+                          type="button"
+                          class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/75 outline-none hover:bg-emerald-500/15 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/45"
+                          title="Giá cho thuê một tháng × số tháng đầu tư (chưa trừ thuế thu nhập cá nhân từ cho thuê — mô hình demo tập trung vào thuế 2% trên giá bán)."
+                          aria-label="Giải thích: Doanh thu cho thuê"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3.5 w-3.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                          </svg>
+                        </button>
+                      </dt>
                       <dd id="resultInvTotalRent" class="font-medium tabular-nums text-slate-100">—</dd>
                     </div>
                     <div
                       class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                     >
-                      <dt class="text-slate-400">Dư nợ cuối kỳ:</dt>
+                      <dt class="flex min-w-0 items-center gap-1 text-slate-400">
+                        <span class="min-w-0">Dư nợ cuối kỳ:</span>
+                        <button
+                          type="button"
+                          class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/75 outline-none hover:bg-emerald-500/15 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/45"
+                          title="Dư nợ sau tháng cuối cùng trong thời gian đầu tư; dùng làm cơ sở cho phí trả nợ trước hạn (% × dư nợ)."
+                          aria-label="Giải thích: Dư nợ cuối kỳ"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3.5 w-3.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                          </svg>
+                        </button>
+                      </dt>
                       <dd id="resultInvBalanceEnd" class="font-medium tabular-nums text-slate-100">—</dd>
                     </div>
                     <div
@@ -718,19 +967,55 @@
                     <div
                       class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                     >
-                      <dt class="text-slate-400">Phí trả nợ trước hạn:</dt>
+                      <dt class="flex min-w-0 items-center gap-1 text-slate-400">
+                        <span class="min-w-0">Phí trả nợ trước hạn:</span>
+                        <button
+                          type="button"
+                          class="hidden shrink-0 rounded-full p-0.5 text-emerald-300/75 outline-none hover:bg-emerald-500/15 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/45"
+                          title="Ước tính theo % bạn nhập × dư nợ cuối kỳ tại mốc bán/tất toán (phí ngân hàng thực tế có thể khác theo hợp đồng)."
+                          aria-label="Giải thích: Phí trả nợ trước hạn"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3.5 w-3.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                          </svg>
+                        </button>
+                      </dt>
                       <dd id="resultInvEarlyRepayFee" class="font-medium tabular-nums text-slate-100">—</dd>
                     </div>
                     <div
                       class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                     >
-                      <dt class="text-slate-400">Thuế TNCN (2% giá bán dự kiến):</dt>
+                      <dt class="flex min-w-0 items-center gap-1 text-slate-400">
+                        <span class="min-w-0 leading-snug">Thuế TNCN (2% giá bán dự kiến):</span>
+                        <button
+                          type="button"
+                          class="hidden shrink-0 self-start rounded-full p-0.5 text-emerald-300/75 outline-none hover:bg-emerald-500/15 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/45"
+                          title="Thuế thu nhập cá nhân ước tính theo công thức demo: 2% × giá bán dự kiến. Mức thực tế phụ thuộc pháp lý và từng trường hợp — dùng để so sánh nhanh, không thay thế tư vấn thuế."
+                          aria-label="Giải thích: Thuế TNCN"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3.5 w-3.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                          </svg>
+                        </button>
+                      </dt>
                       <dd id="resultInvTaxTncn" class="font-medium tabular-nums text-slate-100">—</dd>
                     </div>
                     <div
                       class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                     >
-                      <dt class="text-slate-400">Phí môi giới (1% giá bán dự kiến):</dt>
+                      <dt class="flex min-w-0 items-center gap-1 text-slate-400">
+                        <span class="min-w-0 leading-snug">Phí môi giới (1% giá bán dự kiến):</span>
+                        <button
+                          type="button"
+                          class="hidden shrink-0 self-start rounded-full p-0.5 text-emerald-300/75 outline-none hover:bg-emerald-500/15 hover:text-emerald-50 focus:ring-2 focus:ring-emerald-400/45"
+                          title="Giả định demo: 1% × giá bán dự kiến. Thực tế thương lượng theo hợp đồng môi giới/chuyển nhượng."
+                          aria-label="Giải thích: Phí môi giới"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3.5 w-3.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                          </svg>
+                        </button>
+                      </dt>
                       <dd id="resultInvBrokerFee" class="font-medium tabular-nums text-slate-100">—</dd>
                     </div>
                   </div>
@@ -743,15 +1028,18 @@
               -->
             </div>
 
-            <div id="loanScheduleWrapper" class="mt-6 hidden overflow-x-auto rounded-xl ring-1 ring-white/10">
+            <div
+              id="loanScheduleWrapper"
+              class="mt-6 hidden overflow-x-auto rounded-xl bg-black/15 [-webkit-overflow-scrolling:touch]"
+            >
               <p
                 id="loanScheduleCaption"
-                class="border-b border-white/10 bg-slate-950/40 px-4 py-3 text-sm font-medium text-slate-200"
+                class="border-b border-white/10 bg-black/25 px-3 py-3 text-sm font-medium text-emerald-100/90 sm:px-4"
               >
                 Lịch thanh toán ngân hàng (VNĐ)
               </p>
               <table class="min-w-full border-collapse text-left text-sm text-slate-200">
-                <thead class="bg-slate-950/55 text-xs uppercase tracking-wide text-slate-400">
+                <thead class="bg-[#0a1512]/90 text-xs uppercase tracking-wide text-emerald-200/55">
                   <tr>
                     <th class="px-3 py-2 font-medium">Tháng</th>
                     <th class="px-3 py-2 font-medium">Gốc trả</th>
@@ -760,24 +1048,23 @@
                     <th class="px-3 py-2 font-medium">Dư nợ cuối kỳ</th>
                   </tr>
                 </thead>
-                <tbody id="loanScheduleBody" class="divide-y divide-white/10"></tbody>
+                <tbody id="loanScheduleBody" class="divide-y divide-emerald-900/25"></tbody>
               </table>
               <div
                 id="loanSchedulePdfPanel"
-                class="hidden border-t border-white/10 bg-slate-950/40 px-4 py-4"
+                class="hidden bg-black/20 px-3 py-4 sm:px-4"
               >
-                <p class="text-sm text-slate-300">
-                  Xuất PDF lịch trả từ tháng đầu tiên đến tháng cuối theo thời gian đầu tư (mốc bán / trả phí tất
-                  toán trước hạn), tối đa bằng kỳ hạn vay. Nhập email và bấm xuất.
-                  <span class="block mt-1 text-xs text-slate-500">
-                    Bản demo: file PDF tải xuống máy. Phiên bản tích hợp backend sẽ gửi cùng nội dung tới địa chỉ
-                    email bạn nhập.
+                <p class="text-sm text-emerald-100/75">
+                  Tải lịch trả gốc/lãi theo thời gian đầu tư (tối đa bằng kỳ hạn vay). Nhập email rồi chọn
+                  <strong class="font-semibold text-emerald-50/95">Nhận báo cáo PDF</strong> — thao tác phụ, không bắt buộc để xem kết quả.
+                  <span class="block mt-1.5 text-xs text-emerald-200/50">
+                    Bản demo: file PDF tải về máy. Phiên bản có backend sẽ gửi cùng nội dung tới email bạn nhập.
                   </span>
                 </p>
-                <div class="mt-3 flex flex-col gap-3 sm:flex-row sm:items-end">
+                <div class="mt-3 flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-3">
                   <div class="min-w-0 flex-1">
-                    <label for="loanSchedulePdfEmail" class="block text-xs font-medium text-slate-400"
-                      >Email nhận file PDF</label
+                    <label for="loanSchedulePdfEmail" class="block text-xs font-medium text-emerald-200/60"
+                      >Email (tuỳ chọn)</label
                     >
                     <input
                       id="loanSchedulePdfEmail"
@@ -785,20 +1072,21 @@
                       inputmode="email"
                       autocomplete="email"
                       placeholder="vidu@email.com"
-                      class="mt-1 w-full rounded-lg border border-white/10 bg-slate-950/80 px-3 py-2 text-sm text-slate-100 outline-none ring-sky-400/50 placeholder:text-slate-500 focus:border-sky-500/40 focus:ring-2"
+                      class="mt-1 min-h-[2.75rem] w-full rounded-lg border border-emerald-900/50 bg-[#071210]/90 px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-slate-500 focus:border-emerald-500/40 focus:ring-2 focus:ring-emerald-400/45"
                     />
                   </div>
                   <button
                     id="loanSchedulePdfBtn"
                     type="button"
-                    class="shrink-0 rounded-xl bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/10 transition hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-400/70"
+                    class="min-h-[2.75rem] w-full shrink-0 rounded-xl border border-emerald-400/30 bg-emerald-950/45 px-4 py-2.5 text-sm font-semibold text-emerald-100/90 shadow-sm transition hover:border-emerald-300/45 hover:bg-emerald-900/55 focus:outline-none focus:ring-2 focus:ring-emerald-400/40 sm:w-auto sm:px-5"
                   >
-                    Xuất PDF
+                    Nhận báo cáo PDF
                   </button>
                 </div>
                 <p id="loanSchedulePdfStatus" class="mt-2 hidden text-xs" role="status"></p>
               </div>
             </div>
+          </div>
           </div>
         </section>
 
@@ -806,7 +1094,7 @@
           class="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center"
         >
           <div class="text-sm text-slate-500">
-            © <span id="year"></span> FineLand. Tìm kiếm bất động sản nhanh chóng.
+            © <span id="year"></span> FineLand. Quyết định đầu tư nhanh chóng, an toàn.
           </div>
           <div class="flex items-center gap-3 text-sm">
             <a href="#" class="text-slate-400 hover:text-slate-200">Điều khoản</a>
@@ -839,6 +1127,7 @@
 
       // Logic (JS): Thu chi năm đầu & Lợi nhuận năm đầu — Annuity / Dư nợ giảm dần + bảng 12 tháng
       const aptPurchaseInput = document.getElementById("aptPurchasePrice");
+      const aptPurchaseFieldHintEl = document.getElementById("aptPurchaseFieldHint");
       const aptRentInput = document.getElementById("aptMonthlyRent");
       const bankRateInput = document.getElementById("bankAnnualRate");
       const subsequentAnnualRateInput = document.getElementById("subsequentAnnualRate");
@@ -847,10 +1136,16 @@
       const loanLimitValueInput = document.getElementById("loanLimitValue");
       const loanLimitUnitSelect = document.getElementById("loanLimitUnit");
       const loanLimitUnitLabelEl = document.getElementById("loanLimitUnitLabel");
+      const loanLimitFieldHintEl = document.getElementById("loanLimitFieldHint");
+      const bankAnnualRateHintEl = document.getElementById("bankAnnualRateHint");
+      const subsequentAnnualRateHintEl = document.getElementById("subsequentAnnualRateHint");
+      const earlyRepaymentFeeRateHintEl = document.getElementById("earlyRepaymentFeeRateHint");
       const loanTermValueInput = document.getElementById("loanTermValue");
+      const loanTermFieldHintEl = document.getElementById("loanTermFieldHint");
       const loanTermUnitSelect = document.getElementById("loanTermUnit");
       const loanTermUnitLabelEl = document.getElementById("loanTermUnitLabel");
       const fixedRateTermValueInput = document.getElementById("fixedRateTermValue");
+      const fixedRateFieldHintEl = document.getElementById("fixedRateFieldHint");
       const fixedRateTermUnitSelect = document.getElementById("fixedRateTermUnit");
       const fixedRateTermUnitLabelEl = document.getElementById("fixedRateTermUnitLabel");
       const investmentHorizonValueInput = document.getElementById("investmentHorizonValue");
@@ -879,6 +1174,9 @@
       const loanSchedulePdfEmailInput = document.getElementById("loanSchedulePdfEmail");
       const loanSchedulePdfBtn = document.getElementById("loanSchedulePdfBtn");
       const loanSchedulePdfStatusEl = document.getElementById("loanSchedulePdfStatus");
+
+      const MAX_LOAN_TERM_YEARS = 50;
+      const MAX_LOAN_TERM_MONTHS = MAX_LOAN_TERM_YEARS * 12;
 
       /** Lịch trả nợ đầy đủ n tháng (mỗi phần tử = 1 tháng). PDF: tháng 1 … min(H, n). */
       let lastFullLoanSchedule = [];
@@ -930,6 +1228,36 @@
         const s = String(raw ?? "").trim();
         if (s === "" || s === "." || s === ",") return NaN;
         const clean = vnRawToClean(s, 12);
+        if (clean === "" || clean === ".") return NaN;
+        const n = Number(clean);
+        return Number.isFinite(n) ? n : NaN;
+      }
+
+      /**
+       * Ô % (vi-VN): dấu phẩy = thập phân; dấu chấm luôn là nghìn (không coi chấm là thập phân khi không có phẩy).
+       */
+      function vnRawToCleanPercent(raw, maxDecimals) {
+        let s = String(raw ?? "")
+          .replace(/\s/g, "")
+          .replace(/[^\d.,]/g, "");
+        const lc = s.lastIndexOf(",");
+        if (lc !== -1) {
+          let intSide = s.slice(0, lc).replace(/\./g, "").replace(/[^\d]/g, "");
+          let fracSide = s.slice(lc + 1).replace(/[^\d]/g, "").slice(0, maxDecimals);
+          if (s.endsWith(",") && fracSide === "") {
+            if (intSide === "") return "0.";
+            return intSide + ".";
+          }
+          if (fracSide.length > 0) return (intSide || "0") + "." + fracSide;
+          return intSide;
+        }
+        return s.replace(/\./g, "").replace(/[^\d]/g, "");
+      }
+
+      function parseViVnPercent(raw) {
+        const s = String(raw ?? "").trim();
+        if (s === "" || s === "." || s === ",") return NaN;
+        const clean = vnRawToCleanPercent(s, 12);
         if (clean === "" || clean === ".") return NaN;
         const n = Number(clean);
         return Number.isFinite(n) ? n : NaN;
@@ -1031,11 +1359,16 @@
       }
 
       function handleVnNumberInput(el, maxDecimals) {
+        const usePercent =
+          el.classList.contains("js-vn-percent") ||
+          (el === loanLimitValueInput && loanLimitUnitSelect.value === "pct");
         const prev = el.value;
         const sel = el.selectionStart ?? prev.length;
         const commaIdx = prev.lastIndexOf(",");
 
-        const clean = vnRawToClean(prev, maxDecimals);
+        const clean = usePercent
+          ? vnRawToCleanPercent(prev, maxDecimals)
+          : vnRawToClean(prev, maxDecimals);
         const next = formatGroupedVnFromClean(clean, maxDecimals);
 
         let pos;
@@ -1070,12 +1403,197 @@
         if (loanLimitUnitLabelEl) loanLimitUnitLabelEl.textContent = vnd ? "VNĐ" : "%";
       }
 
-      loanLimitUnitSelect.addEventListener("change", syncLoanLimitUnitUi);
+      const pctHintNeutral = "mt-1 text-xs text-slate-500";
+      const pctHintWarn = "mt-1 text-xs font-medium text-amber-400";
+
+      function setPctFieldHint(el, message, warn) {
+        if (!el) return;
+        delete el.dataset.loanCtx;
+        if (!message) {
+          el.textContent = "";
+          el.className = pctHintNeutral;
+          return;
+        }
+        el.textContent = message;
+        el.className = warn ? pctHintWarn : pctHintNeutral;
+      }
+
+      function setLoanCtxHint(el, message, warn) {
+        if (!el) return;
+        if (!message) {
+          el.textContent = "";
+          el.className = pctHintNeutral;
+          delete el.dataset.loanCtx;
+          return;
+        }
+        el.textContent = message;
+        el.className = warn ? pctHintWarn : pctHintNeutral;
+        el.dataset.loanCtx = "1";
+      }
+
+      /**
+       * Cảnh báo: % > 100; hạn mức VNĐ > giá mua; kỳ hạn vay / thời gian lãi cố định > 50 năm / 600 tháng;
+       * khi lãi cố định đạt mức tối đa thì khóa ô lãi suất các năm tiếp theo.
+       */
+      function updatePercentInputWarnings() {
+        if (loanLimitUnitSelect.value === "pct") {
+          const lp = parseViVnPercent(loanLimitValueInput.value);
+          if (Number.isFinite(lp) && lp > 100) {
+            setPctFieldHint(
+              loanLimitFieldHintEl,
+              "Cảnh báo: hạn mức theo % vượt quá 100% giá mua, không hợp lệ.",
+              true,
+            );
+          } else {
+            setPctFieldHint(loanLimitFieldHintEl, "", false);
+          }
+        } else {
+          const purchase = parseViVnNumber(aptPurchaseInput.value);
+          const amt = parseViVnNumber(loanLimitValueInput.value);
+          if (
+            Number.isFinite(purchase) &&
+            purchase > 0 &&
+            Number.isFinite(amt) &&
+            amt > purchase
+          ) {
+            setPctFieldHint(
+              loanLimitFieldHintEl,
+              "Cảnh báo: hạn mức vay VNĐ không được lớn hơn giá mua dự án.",
+              true,
+            );
+          } else {
+            setPctFieldHint(loanLimitFieldHintEl, "", false);
+          }
+        }
+
+        const bankPct = parseViVnPercent(bankRateInput.value);
+        if (Number.isFinite(bankPct) && bankPct > 100) {
+          setPctFieldHint(
+            bankAnnualRateHintEl,
+            "Cảnh báo: lãi suất cố định trên 100%/năm, không hợp lệ.",
+            true,
+          );
+        } else {
+          setPctFieldHint(bankAnnualRateHintEl, "", false);
+        }
+
+        const fRaw = parseViVnNumber(fixedRateTermValueInput.value);
+        const fV = Number.isFinite(fRaw) ? Math.floor(Math.max(0, fRaw)) : NaN;
+        let fixedTermAtCap = false;
+        if (Number.isFinite(fV) && fV >= 1) {
+          const fixedYears = fixedRateTermUnitSelect.value === "years";
+          if (fixedYears) {
+            if (fV > MAX_LOAN_TERM_YEARS) {
+              setPctFieldHint(
+                fixedRateFieldHintEl,
+                `Cảnh báo: thời gian lãi suất cố định tối đa ${MAX_LOAN_TERM_YEARS} năm (${MAX_LOAN_TERM_MONTHS} tháng). Hãy nhập lại thời gian phù hợp.`,
+                true,
+              );
+            } else {
+              setPctFieldHint(fixedRateFieldHintEl, "", false);
+            }
+            fixedTermAtCap = fV === MAX_LOAN_TERM_YEARS;
+          } else {
+            if (fV > MAX_LOAN_TERM_MONTHS) {
+              setPctFieldHint(
+                fixedRateFieldHintEl,
+                `Cảnh báo: thời gian lãi suất cố định tối đa ${MAX_LOAN_TERM_MONTHS} tháng (${MAX_LOAN_TERM_YEARS} năm). Hãy nhập lại thời gian phù hợp.`,
+                true,
+              );
+            } else {
+              setPctFieldHint(fixedRateFieldHintEl, "", false);
+            }
+            fixedTermAtCap = fV === MAX_LOAN_TERM_MONTHS;
+          }
+        } else {
+          setPctFieldHint(fixedRateFieldHintEl, "", false);
+        }
+
+        if (fixedTermAtCap) {
+          subsequentAnnualRateInput.disabled = true;
+          subsequentAnnualRateInput.value = "";
+          setPctFieldHint(
+            subsequentAnnualRateHintEl,
+            "Thời gian lãi suất cố định đã ở mức tối đa (50 năm hoặc 600 tháng), không còn giai đoạn lãi các năm tiếp theo trong phạm vi tối đa.",
+            false,
+          );
+        } else {
+          subsequentAnnualRateInput.disabled = false;
+          const subRaw = subsequentAnnualRateInput.value.trim();
+          const subPct = parseViVnPercent(subsequentAnnualRateInput.value);
+          if (subRaw !== "" && Number.isFinite(subPct) && subPct > 100) {
+            setPctFieldHint(
+              subsequentAnnualRateHintEl,
+              "Cảnh báo: lãi suất các năm tiếp theo trên 100%/năm, không hợp lệ.",
+              true,
+            );
+          } else {
+            setPctFieldHint(subsequentAnnualRateHintEl, "", false);
+          }
+        }
+
+        const earlyPct = parseViVnPercent(earlyRepaymentFeeRateInput.value);
+        if (Number.isFinite(earlyPct) && earlyPct > 100) {
+          setPctFieldHint(
+            earlyRepaymentFeeRateHintEl,
+            "Cảnh báo: tỷ lệ trả nợ trước hạn trên 100%, không hợp lệ.",
+            true,
+          );
+        } else {
+          setPctFieldHint(earlyRepaymentFeeRateHintEl, "", false);
+        }
+
+        const termRaw = parseViVnNumber(loanTermValueInput.value);
+        const termV = Number.isFinite(termRaw) ? Math.floor(Math.max(0, termRaw)) : NaN;
+        if (Number.isFinite(termV) && termV >= 1) {
+          if (loanTermUnitSelect.value === "years" && termV > MAX_LOAN_TERM_YEARS) {
+            setPctFieldHint(
+              loanTermFieldHintEl,
+              `Cảnh báo: kỳ hạn vay tối đa ${MAX_LOAN_TERM_YEARS} năm (${MAX_LOAN_TERM_MONTHS} tháng). Hãy nhập lại thời gian phù hợp.`,
+              true,
+            );
+          } else if (loanTermUnitSelect.value === "months" && termV > MAX_LOAN_TERM_MONTHS) {
+            setPctFieldHint(
+              loanTermFieldHintEl,
+              `Cảnh báo: kỳ hạn vay tối đa ${MAX_LOAN_TERM_MONTHS} tháng (${MAX_LOAN_TERM_YEARS} năm). Hãy nhập lại thời gian phù hợp.`,
+              true,
+            );
+          } else {
+            setPctFieldHint(loanTermFieldHintEl, "", false);
+          }
+        } else {
+          setPctFieldHint(loanTermFieldHintEl, "", false);
+        }
+      }
+
+      loanLimitUnitSelect.addEventListener("change", () => {
+        syncLoanLimitUnitUi();
+        if (loanLimitValueInput.value.trim() !== "") {
+          handleVnNumberInput(loanLimitValueInput, 2);
+        }
+        updatePercentInputWarnings();
+      });
       syncLoanLimitUnitUi();
+      updatePercentInputWarnings();
+
+      const pctWarnInputs = [
+        aptPurchaseInput,
+        loanLimitValueInput,
+        bankRateInput,
+        subsequentAnnualRateInput,
+        earlyRepaymentFeeRateInput,
+        loanTermValueInput,
+        fixedRateTermValueInput,
+      ];
+      const refreshInvestorHints = () => updatePercentInputWarnings();
+      pctWarnInputs.forEach((el) => {
+        el.addEventListener("input", refreshInvestorHints);
+        el.addEventListener("blur", refreshInvestorHints);
+      });
 
       function syncLoanTermUnitUi() {
         const years = loanTermUnitSelect.value === "years";
-        loanTermValueInput.placeholder = years ? "Ví dụ: 20" : "Ví dụ: 240";
+        loanTermValueInput.placeholder = years ? "Ví dụ: 10" : "Ví dụ: 120";
         if (loanTermUnitLabelEl) loanTermUnitLabelEl.textContent = years ? "năm" : "tháng";
       }
 
@@ -1091,20 +1609,21 @@
               v = Math.max(1, Math.round(v / 12));
               loanTermValueInput.value = formatGroupedVnFromClean(String(v), 0);
             } else if (prevLoanTermUnit === "years" && cur === "months") {
-              v = Math.min(600, Math.max(1, v * 12));
+              v = Math.min(MAX_LOAN_TERM_MONTHS, Math.max(1, v * 12));
               loanTermValueInput.value = formatGroupedVnFromClean(String(v), 0);
             }
           }
           prevLoanTermUnit = cur;
         }
         syncLoanTermUnitUi();
+        updatePercentInputWarnings();
       });
       syncLoanTermUnitUi();
 
       /** Đồng bộ đơn vị thời gian lãi suất cố định (dùng trong lịch trả nợ hai giai đoạn lãi). */
       function syncFixedRateTermUnitUi() {
         const years = fixedRateTermUnitSelect.value === "years";
-        fixedRateTermValueInput.placeholder = years ? "Ví dụ: 5" : "Ví dụ: 60";
+        fixedRateTermValueInput.placeholder = years ? "Ví dụ: 5" : "Ví dụ: 50";
         if (fixedRateTermUnitLabelEl) fixedRateTermUnitLabelEl.textContent = years ? "năm" : "tháng";
       }
 
@@ -1120,13 +1639,14 @@
               v = Math.max(1, Math.round(v / 12));
               fixedRateTermValueInput.value = formatGroupedVnFromClean(String(v), 0);
             } else if (prevFixedRateTermUnit === "years" && cur === "months") {
-              v = Math.min(600, Math.max(1, v * 12));
+              v = Math.min(MAX_LOAN_TERM_MONTHS, Math.max(1, v * 12));
               fixedRateTermValueInput.value = formatGroupedVnFromClean(String(v), 0);
             }
           }
           prevFixedRateTermUnit = cur;
         }
         syncFixedRateTermUnitUi();
+        updatePercentInputWarnings();
       });
       syncFixedRateTermUnitUi();
 
@@ -1306,7 +1826,7 @@
         loanScheduleBodyEl.appendChild(frag);
       }
 
-      /** Quy đổi kỳ hạn nhập → n (số tháng) cho annuity / declining. Năm × 12, tối đa 600 tháng. */
+      /** Quy đổi kỳ hạn nhập → n (số tháng) cho annuity / declining. Năm × 12, tối đa MAX_LOAN_TERM_MONTHS tháng. */
       /** Kỳ hạn vay (tháng); ô trống hoặc không hợp lệ → null (không mặc định 240). */
       function readLoanTermMonths() {
         const raw = parseViVnNumber(loanTermValueInput.value);
@@ -1314,8 +1834,428 @@
         if (!Number.isFinite(v) || v < 1) return null;
         const months =
           loanTermUnitSelect.value === "years" ? v * 12 : v;
-        return Math.min(600, Math.max(1, months));
+        return Math.min(MAX_LOAN_TERM_MONTHS, Math.max(1, months));
       }
+
+      function validateInvestorLoanBlockers() {
+        const purchasePrice = Math.max(0, parseViVnNumber(aptPurchaseInput.value) || 0);
+        const rawLoanLimit =
+          loanLimitUnitSelect.value === "pct"
+            ? parseViVnPercent(loanLimitValueInput.value)
+            : parseViVnNumber(loanLimitValueInput.value);
+        const { loanPrincipal } = resolveLoanFromLimitInputs(
+          purchasePrice,
+          rawLoanLimit,
+          loanLimitUnitSelect.value,
+        );
+        if (!(loanPrincipal > 0)) return { blocked: false, issues: [] };
+
+        const issues = [];
+        const n = readLoanTermMonths();
+        if (n === null || !Number.isFinite(n) || n < 1) {
+          issues.push("kỳ hạn vay (số năm hoặc tháng)");
+        }
+
+        const eTrim = earlyRepaymentFeeRateInput.value.trim();
+        const eVal = eTrim === "" ? NaN : parseViVnPercent(earlyRepaymentFeeRateInput.value);
+        if (eTrim === "" || !Number.isFinite(eVal) || eVal < 0) {
+          issues.push("tỷ lệ trả nợ trước hạn (có thể nhập 0)");
+        }
+
+        const bTrim = bankRateInput.value.trim();
+        const sTrim = subsequentAnnualRateInput.disabled ? "" : subsequentAnnualRateInput.value.trim();
+        const bVal = bTrim === "" ? NaN : parseViVnPercent(bankRateInput.value);
+        const sVal = sTrim === "" ? NaN : parseViVnPercent(subsequentAnnualRateInput.value);
+        const hasB = bTrim !== "" && Number.isFinite(bVal);
+        const hasS = sTrim !== "" && Number.isFinite(sVal);
+        if (!hasB && !hasS) {
+          issues.push("ít nhất một trong hai: lãi suất cố định hoặc lãi suất các năm tiếp theo");
+        }
+
+        return { blocked: issues.length > 0, issues };
+      }
+
+      /** Banner dưới nút tính — gọi khi bấm «Tính Toán Lời Lỗ» mà thiếu dữ liệu (kèm applyLoanContextHints). */
+      function updateInvestorPrereqBanner() {
+        const el = document.getElementById("investorLoanPrereqBanner");
+        if (!el) return;
+        const purchasePrice = Math.max(0, parseViVnNumber(aptPurchaseInput.value) || 0);
+        const limitTrim = loanLimitValueInput.value.trim();
+        const rawLoanLimit =
+          loanLimitUnitSelect.value === "pct"
+            ? parseViVnPercent(loanLimitValueInput.value)
+            : parseViVnNumber(loanLimitValueInput.value);
+        const { loanPrincipal } = resolveLoanFromLimitInputs(
+          purchasePrice,
+          rawLoanLimit,
+          loanLimitUnitSelect.value,
+        );
+        const userEnteredLimit = limitTrim !== "" && Number.isFinite(rawLoanLimit) && rawLoanLimit > 0;
+
+        const baseClass =
+          "mt-3 rounded-xl bg-amber-500/10 px-4 py-3 text-sm leading-relaxed text-amber-100 ring-1 ring-amber-500/25";
+
+        if (userEnteredLimit && purchasePrice <= 0) {
+          el.className = baseClass;
+          el.classList.remove("hidden");
+          el.textContent =
+            "Nhắc: bạn đã nhập hạn mức vay — cần điền giá mua dự án (VNĐ) để quy đổi thành gốc vay. Khi đã có gốc vay, điền đủ kỳ hạn vay, ít nhất một ô lãi suất và tỷ lệ trả nợ trước hạn thì mới xem được kết quả vay.";
+          return;
+        }
+
+        const { blocked, issues } = validateInvestorLoanBlockers();
+        if (loanPrincipal > 0 && blocked) {
+          el.className = baseClass;
+          el.classList.remove("hidden");
+          el.textContent =
+            "Nhắc — khi có vay, còn thiếu: " +
+            issues.join("; ") +
+            ". Điền đủ rồi bấm «Tính Toán Lời Lỗ» để xem số liệu.";
+          return;
+        }
+
+        el.textContent = "";
+        el.classList.add("hidden");
+        el.className = baseClass + " hidden";
+      }
+
+      /**
+       * Gợi ý theo ngữ cảnh có vay / không vay (dataset.loanCtx); không ghi đè cảnh báo % hoặc vượt kỳ hạn.
+       */
+      function applyLoanContextHints() {
+        const purchasePrice = Math.max(0, parseViVnNumber(aptPurchaseInput.value) || 0);
+        const rawLoanLimit =
+          loanLimitUnitSelect.value === "pct"
+            ? parseViVnPercent(loanLimitValueInput.value)
+            : parseViVnNumber(loanLimitValueInput.value);
+        const { loanPrincipal } = resolveLoanFromLimitInputs(
+          purchasePrice,
+          rawLoanLimit,
+          loanLimitUnitSelect.value,
+        );
+        const limitTrim = loanLimitValueInput.value.trim();
+        const userEnteredLimit = limitTrim !== "" && Number.isFinite(rawLoanLimit) && rawLoanLimit > 0;
+
+        const ctxEls = [
+          bankAnnualRateHintEl,
+          subsequentAnnualRateHintEl,
+          loanTermFieldHintEl,
+          earlyRepaymentFeeRateHintEl,
+          fixedRateFieldHintEl,
+        ];
+        if (!(loanPrincipal > 0)) {
+          ctxEls.forEach((el) => {
+            if (el?.dataset?.loanCtx === "1") setPctFieldHint(el, "", false);
+          });
+          if (userEnteredLimit && purchasePrice <= 0 && aptPurchaseFieldHintEl) {
+            setLoanCtxHint(
+              aptPurchaseFieldHintEl,
+              "Nhắc: nhập giá mua dự án (VNĐ) để tính gốc vay từ hạn mức; sau đó điền các ô vay bắt buộc (kỳ hạn, lãi suất, tỷ lệ trả nợ trước hạn).",
+              true,
+            );
+          } else if (aptPurchaseFieldHintEl?.dataset.loanCtx === "1") {
+            setPctFieldHint(aptPurchaseFieldHintEl, "", false);
+          }
+          return;
+        }
+
+        if (aptPurchaseFieldHintEl?.dataset.loanCtx === "1") {
+          setPctFieldHint(aptPurchaseFieldHintEl, "", false);
+        }
+
+        const n = readLoanTermMonths();
+        if (loanTermFieldHintEl && !loanTermFieldHintEl.textContent.includes("tối đa")) {
+          if (n === null || !Number.isFinite(n) || n < 1) {
+            setLoanCtxHint(
+              loanTermFieldHintEl,
+              "Khi có vay: bắt buộc nhập kỳ hạn vay (chọn đơn vị năm hoặc tháng).",
+              true,
+            );
+          } else if (loanTermFieldHintEl.dataset.loanCtx === "1") {
+            setPctFieldHint(loanTermFieldHintEl, "", false);
+          }
+        }
+
+        const earlyPctChk = parseViVnPercent(earlyRepaymentFeeRateInput.value);
+        const eTrim = earlyRepaymentFeeRateInput.value.trim();
+        const eVal = eTrim === "" ? NaN : earlyPctChk;
+        const eBad = eTrim === "" || !Number.isFinite(eVal) || eVal < 0;
+        if (earlyRepaymentFeeRateHintEl && !(Number.isFinite(earlyPctChk) && earlyPctChk > 100)) {
+          if (eBad) {
+            setLoanCtxHint(
+              earlyRepaymentFeeRateHintEl,
+              "Khi có vay: bắt buộc nhập tỷ lệ trả nợ trước hạn (nhập 0 nếu không áp dụng).",
+              true,
+            );
+          } else if (earlyRepaymentFeeRateHintEl.dataset.loanCtx === "1") {
+            setPctFieldHint(earlyRepaymentFeeRateHintEl, "", false);
+          }
+        }
+
+        const bTrim = bankRateInput.value.trim();
+        const sTrim = subsequentAnnualRateInput.disabled ? "" : subsequentAnnualRateInput.value.trim();
+        const bVal = bTrim === "" ? NaN : parseViVnPercent(bankRateInput.value);
+        const sVal = sTrim === "" ? NaN : parseViVnPercent(subsequentAnnualRateInput.value);
+        const hasB = bTrim !== "" && Number.isFinite(bVal);
+        const hasS = sTrim !== "" && Number.isFinite(sVal);
+        const bankOver100 = Number.isFinite(bVal) && bVal > 100;
+        const subOver100 = Number.isFinite(sVal) && sVal > 100;
+
+        if (bankAnnualRateHintEl && !bankOver100) {
+          if (!hasB && !hasS) {
+            setLoanCtxHint(
+              bankAnnualRateHintEl,
+              "Khi có vay: nhập lãi suất cố định hoặc lãi suất các năm tiếp theo (ít nhất một ô).",
+              true,
+            );
+          } else if (!hasB && hasS) {
+            setLoanCtxHint(
+              bankAnnualRateHintEl,
+              "Gợi ý: có thể để trống lãi suất cố định nếu đã nhập lãi các năm tiếp theo (áp dụng cho cả kỳ vay).",
+              false,
+            );
+          } else if (bankAnnualRateHintEl.dataset.loanCtx === "1") {
+            setPctFieldHint(bankAnnualRateHintEl, "", false);
+          }
+        }
+
+        if (!subsequentAnnualRateInput.disabled && subsequentAnnualRateHintEl && !subOver100) {
+          if (!hasB && !hasS) {
+            setLoanCtxHint(
+              subsequentAnnualRateHintEl,
+              "Khi có vay: nhập lãi suất cố định hoặc lãi suất các năm tiếp theo (ít nhất một ô).",
+              true,
+            );
+          } else if (hasB && !hasS) {
+            setLoanCtxHint(
+              subsequentAnnualRateHintEl,
+              "Gợi ý: có thể để trống — hệ thống dùng bằng lãi suất cố định cho các năm tiếp theo.",
+              false,
+            );
+          } else if (subsequentAnnualRateHintEl.dataset.loanCtx === "1") {
+            setPctFieldHint(subsequentAnnualRateHintEl, "", false);
+          }
+        }
+
+        if (fixedRateFieldHintEl && !fixedRateFieldHintEl.textContent.includes("tối đa")) {
+          const fraw = parseViVnNumber(fixedRateTermValueInput.value);
+          const fPositive = Number.isFinite(fraw) && fraw > 0;
+          if (!hasB && hasS) {
+            setLoanCtxHint(
+              fixedRateFieldHintEl,
+              "Gợi ý: không bắt buộc khi chỉ dùng lãi các năm tiếp theo cho toàn bộ kỳ vay.",
+              false,
+            );
+          } else if (hasB && !fPositive) {
+            setLoanCtxHint(
+              fixedRateFieldHintEl,
+              "Gợi ý: để trống hoặc 0 — thời gian lãi cố định sẽ mặc định bằng kỳ hạn vay.",
+              false,
+            );
+          } else if (hasB && hasS && fPositive) {
+            if (fixedRateFieldHintEl.dataset.loanCtx === "1") {
+              setPctFieldHint(fixedRateFieldHintEl, "", false);
+            }
+          } else if (fixedRateFieldHintEl.dataset.loanCtx === "1") {
+            setPctFieldHint(fixedRateFieldHintEl, "", false);
+          }
+        }
+      }
+
+      const LOAN_IDLE_HINT_MS = 1500;
+
+      function clearInvestorLoanReminders() {
+        [
+          aptPurchaseFieldHintEl,
+          bankAnnualRateHintEl,
+          subsequentAnnualRateHintEl,
+          loanTermFieldHintEl,
+          earlyRepaymentFeeRateHintEl,
+          fixedRateFieldHintEl,
+        ].forEach((h) => {
+          if (h?.dataset?.loanCtx === "1") setPctFieldHint(h, "", false);
+        });
+        const ban = document.getElementById("investorLoanPrereqBanner");
+        if (ban) {
+          ban.textContent = "";
+          ban.classList.add("hidden");
+          ban.className =
+            "mt-3 hidden rounded-xl bg-amber-500/10 px-4 py-3 text-sm leading-relaxed text-amber-100 ring-1 ring-amber-500/25";
+        }
+      }
+
+      function showIdleLoanReminderFor(el) {
+        const purchasePrice = Math.max(0, parseViVnNumber(aptPurchaseInput.value) || 0);
+        const rawLoanLimit =
+          loanLimitUnitSelect.value === "pct"
+            ? parseViVnPercent(loanLimitValueInput.value)
+            : parseViVnNumber(loanLimitValueInput.value);
+        const { loanPrincipal } = resolveLoanFromLimitInputs(
+          purchasePrice,
+          rawLoanLimit,
+          loanLimitUnitSelect.value,
+        );
+        const limitTrim = loanLimitValueInput.value.trim();
+        const userEnteredLimit = limitTrim !== "" && Number.isFinite(rawLoanLimit) && rawLoanLimit > 0;
+
+        if (el === aptPurchaseInput) {
+          if (userEnteredLimit && purchasePrice <= 0 && aptPurchaseFieldHintEl) {
+            setLoanCtxHint(
+              aptPurchaseFieldHintEl,
+              "Nhắc: nhập giá mua dự án (VNĐ) để tính gốc vay từ hạn mức; sau đó điền kỳ hạn vay, lãi suất và tỷ lệ trả nợ trước hạn.",
+              true,
+            );
+          }
+          return;
+        }
+
+        if (!(loanPrincipal > 0)) return;
+
+        const n = readLoanTermMonths();
+        const bTrim = bankRateInput.value.trim();
+        const sTrim = subsequentAnnualRateInput.disabled ? "" : subsequentAnnualRateInput.value.trim();
+        const bVal = bTrim === "" ? NaN : parseViVnPercent(bankRateInput.value);
+        const sVal = sTrim === "" ? NaN : parseViVnPercent(subsequentAnnualRateInput.value);
+        const hasB = bTrim !== "" && Number.isFinite(bVal);
+        const hasS = sTrim !== "" && Number.isFinite(sVal);
+        const bankOver100 = Number.isFinite(bVal) && bVal > 100;
+        const subOver100 = Number.isFinite(sVal) && sVal > 100;
+        const earlyPctChk = parseViVnPercent(earlyRepaymentFeeRateInput.value);
+        const eTrim = earlyRepaymentFeeRateInput.value.trim();
+        const eVal = eTrim === "" ? NaN : earlyPctChk;
+        const eBad = eTrim === "" || !Number.isFinite(eVal) || eVal < 0;
+
+        if (el === loanTermValueInput || el === loanTermUnitSelect) {
+          if (
+            loanTermFieldHintEl &&
+            !loanTermFieldHintEl.textContent.includes("tối đa") &&
+            (n === null || !Number.isFinite(n) || n < 1)
+          ) {
+            setLoanCtxHint(
+              loanTermFieldHintEl,
+              "Khi có vay: bắt buộc nhập kỳ hạn vay (chọn đơn vị năm hoặc tháng).",
+              true,
+            );
+          }
+          return;
+        }
+
+        if (el === earlyRepaymentFeeRateInput) {
+          if (
+            earlyRepaymentFeeRateHintEl &&
+            !(Number.isFinite(earlyPctChk) && earlyPctChk > 100) &&
+            eBad
+          ) {
+            setLoanCtxHint(
+              earlyRepaymentFeeRateHintEl,
+              "Khi có vay: bắt buộc nhập tỷ lệ trả nợ trước hạn (nhập 0 nếu không áp dụng).",
+              true,
+            );
+          }
+          return;
+        }
+
+        if (el === bankRateInput) {
+          if (bankAnnualRateHintEl && !bankOver100) {
+            if (!hasB && !hasS) {
+              setLoanCtxHint(
+                bankAnnualRateHintEl,
+                "Khi có vay: nhập lãi suất cố định hoặc lãi suất các năm tiếp theo (ít nhất một ô).",
+                true,
+              );
+            } else if (!hasB && hasS) {
+              setLoanCtxHint(
+                bankAnnualRateHintEl,
+                "Gợi ý: có thể để trống lãi suất cố định nếu đã nhập lãi các năm tiếp theo (áp dụng cho cả kỳ vay).",
+                false,
+              );
+            }
+          }
+          return;
+        }
+
+        if (el === subsequentAnnualRateInput) {
+          if (!subsequentAnnualRateInput.disabled && subsequentAnnualRateHintEl && !subOver100) {
+            if (!hasB && !hasS) {
+              setLoanCtxHint(
+                subsequentAnnualRateHintEl,
+                "Khi có vay: nhập lãi suất cố định hoặc lãi suất các năm tiếp theo (ít nhất một ô).",
+                true,
+              );
+            } else if (hasB && !hasS) {
+              setLoanCtxHint(
+                subsequentAnnualRateHintEl,
+                "Gợi ý: có thể để trống — hệ thống dùng bằng lãi suất cố định cho các năm tiếp theo.",
+                false,
+              );
+            }
+          }
+          return;
+        }
+
+        if (el === fixedRateTermValueInput || el === fixedRateTermUnitSelect) {
+          if (fixedRateFieldHintEl && !fixedRateFieldHintEl.textContent.includes("tối đa")) {
+            const fraw = parseViVnNumber(fixedRateTermValueInput.value);
+            const fPositive = Number.isFinite(fraw) && fraw > 0;
+            if (!hasB && hasS) {
+              setLoanCtxHint(
+                fixedRateFieldHintEl,
+                "Gợi ý: không bắt buộc khi chỉ dùng lãi các năm tiếp theo cho toàn bộ kỳ vay.",
+                false,
+              );
+            } else if (hasB && !fPositive) {
+              setLoanCtxHint(
+                fixedRateFieldHintEl,
+                "Gợi ý: để trống hoặc 0 — thời gian lãi cố định sẽ mặc định bằng kỳ hạn vay.",
+                false,
+              );
+            }
+          }
+        }
+      }
+
+      function clearLoanFieldIdleTimer(el) {
+        if (!el) return;
+        clearTimeout(el._loanIdleHintT);
+        delete el._loanIdleHintT;
+      }
+
+      function scheduleLoanFieldIdleHint(el) {
+        clearLoanFieldIdleTimer(el);
+        const v0 = el.value;
+        el._loanIdleHintT = setTimeout(() => {
+          delete el._loanIdleHintT;
+          if (document.activeElement !== el) return;
+          if (el.value !== v0) return;
+          showIdleLoanReminderFor(el);
+        }, LOAN_IDLE_HINT_MS);
+      }
+
+      const loanIdleHintTargets = [
+        aptPurchaseInput,
+        loanLimitValueInput,
+        bankRateInput,
+        subsequentAnnualRateInput,
+        earlyRepaymentFeeRateInput,
+        loanTermValueInput,
+        fixedRateTermValueInput,
+        loanTermUnitSelect,
+        fixedRateTermUnitSelect,
+        loanLimitUnitSelect,
+      ];
+      loanIdleHintTargets.forEach((el) => {
+        if (!el) return;
+        el.addEventListener("focus", () => scheduleLoanFieldIdleHint(el));
+        el.addEventListener("blur", () => clearLoanFieldIdleTimer(el));
+        el.addEventListener("input", () => {
+          clearLoanFieldIdleTimer(el);
+          clearInvestorLoanReminders();
+        });
+        el.addEventListener("change", () => {
+          clearLoanFieldIdleTimer(el);
+          clearInvestorLoanReminders();
+        });
+      });
 
       /** Số tháng áp lãi cố định; ô trống hoặc không hợp lệ → cả kỳ vay dùng lãi cố định. */
       function readFixedRateTermMonths(loanTermMonths) {
@@ -1327,7 +2267,7 @@
         let v = Math.floor(raw);
         let months =
           fixedRateTermUnitSelect.value === "years" ? v * 12 : v;
-        months = Math.min(600, Math.max(1, months));
+        months = Math.min(MAX_LOAN_TERM_MONTHS, Math.max(1, months));
         return Math.min(months, loanTermMonths);
       }
 
@@ -1349,15 +2289,14 @@
       }
 
       deepCalcBtn.addEventListener("click", () => {
+        updatePercentInputWarnings();
         const purchasePrice = Math.max(0, parseViVnNumber(aptPurchaseInput.value) || 0);
         const monthlyRent = Math.max(0, parseViVnNumber(aptRentInput.value) || 0);
-        const annualRatePct = parseViVnNumber(bankRateInput.value);
-        const annualRate = Number.isFinite(annualRatePct) ? Math.max(0, annualRatePct) : 0;
-        const subsequentPct = parseViVnNumber(subsequentAnnualRateInput.value);
-        const annualRateSubsequent =
-          Number.isFinite(subsequentPct) && subsequentPct >= 0 ? subsequentPct : annualRate;
 
-        const rawLoanLimit = parseViVnNumber(loanLimitValueInput.value);
+        const rawLoanLimit =
+          loanLimitUnitSelect.value === "pct"
+            ? parseViVnPercent(loanLimitValueInput.value)
+            : parseViVnNumber(loanLimitValueInput.value);
         const { loanPrincipal } = resolveLoanFromLimitInputs(
           purchasePrice,
           rawLoanLimit,
@@ -1365,16 +2304,57 @@
         );
         const equity = purchasePrice - loanPrincipal;
         const n = readLoanTermMonths();
-        const termInvalid = loanPrincipal > 0 && (n === null || n < 1);
-        const r1 = annualRate / 100 / 12;
-        const r2 = annualRateSubsequent / 100 / 12;
-        const tFixed = n === null || n < 1 ? 0 : readFixedRateTermMonths(n);
+        const loanValidation = validateInvestorLoanBlockers();
+        const loanCalcBlocked = loanPrincipal > 0 && loanValidation.blocked;
+        const limitTrimCalc = loanLimitValueInput.value.trim();
+        const userEnteredLimitCalc =
+          limitTrimCalc !== "" && Number.isFinite(rawLoanLimit) && rawLoanLimit > 0;
+        const chuaNhapDuToiThieu = purchasePrice <= 0;
+        if (loanCalcBlocked || (userEnteredLimitCalc && purchasePrice <= 0)) {
+          applyLoanContextHints();
+          updateInvestorPrereqBanner();
+        } else {
+          clearInvestorLoanReminders();
+        }
+
+        let annualRate = 0;
+        let annualRateSubsequent = 0;
+        let tFixed = 0;
+        let r1 = 0;
+        let r2 = 0;
+
+        if (!loanCalcBlocked && loanPrincipal > 0 && n !== null && n >= 1) {
+          const bTrim = bankRateInput.value.trim();
+          const sTrim = subsequentAnnualRateInput.disabled ? "" : subsequentAnnualRateInput.value.trim();
+          const bankPct = bTrim === "" ? NaN : parseViVnPercent(bankRateInput.value);
+          const subPct = sTrim === "" ? NaN : parseViVnPercent(subsequentAnnualRateInput.value);
+          const hasB = bTrim !== "" && Number.isFinite(bankPct);
+          const hasS = sTrim !== "" && Number.isFinite(subPct);
+
+          if (hasB && hasS) {
+            annualRate = Math.max(0, bankPct);
+            annualRateSubsequent = Math.max(0, subPct);
+            tFixed = readFixedRateTermMonths(n);
+          } else if (hasB && !hasS) {
+            annualRate = Math.max(0, bankPct);
+            annualRateSubsequent = annualRate;
+            tFixed = readFixedRateTermMonths(n);
+          } else if (!hasB && hasS) {
+            annualRateSubsequent = Math.max(0, subPct);
+            annualRate = annualRateSubsequent;
+            tFixed = 0;
+          }
+
+          r1 = annualRate / 100 / 12;
+          r2 = annualRateSubsequent / 100 / 12;
+        }
+
         const H = readInvestmentHorizonMonths(n);
         const hPay =
-          loanPrincipal > 0 && n !== null && n >= 1 ? Math.min(H, n) : 0;
+          loanPrincipal > 0 && !loanCalcBlocked && n !== null && n >= 1 ? Math.min(H, n) : 0;
 
         const salePrice = Math.max(0, parseViVnNumber(expectedSalePriceInput.value) || 0);
-        const earlyRepayPctRaw = parseViVnNumber(earlyRepaymentFeeRateInput.value);
+        const earlyRepayPctRaw = parseViVnPercent(earlyRepaymentFeeRateInput.value);
         const earlyRepayPct =
           Number.isFinite(earlyRepayPctRaw) && earlyRepayPctRaw >= 0 ? earlyRepayPctRaw : 0;
 
@@ -1386,7 +2366,7 @@
          * Lợi nhuận: (giá bán + doanh thu cho thuê) − (giá mua + lãi + phí trước hạn + thuế + môi giới).
          * Lịch vay n tháng: tháng 1..tFixed r1, sau đó r2.
          */
-        let thuChi = termInvalid ? 0 : monthlyRent * H;
+        let thuChi = loanCalcBlocked ? 0 : monthlyRent * H;
         let loiNhuan = 0;
         let principalH = 0;
         let interestH = 0;
@@ -1398,7 +2378,7 @@
         const hintLoiNhuan =
           "(Giá bán + doanh thu cho thuê) − (giá mua + lãi trả + phí trả nợ trước hạn + thuế TNCN + phí môi giới).";
 
-        if (loanPrincipal > 0 && n !== null && n >= 1) {
+        if (!loanCalcBlocked && loanPrincipal > 0 && n !== null && n >= 1) {
           fullSchedule =
             mode === "declining"
               ? buildDecliningScheduleVariableRate(loanPrincipal, n, tFixed, r1, r2)
@@ -1418,9 +2398,9 @@
           resultRoiHintEl.textContent = hintLoiNhuan;
         } else {
           balanceEnd = 0;
-          if (termInvalid) {
+          if (loanCalcBlocked) {
             resultTopProfitRateHintEl.textContent =
-              "Nhập kỳ hạn vay hợp lệ (số tháng hoặc số năm) để tính lịch trả và thu chi có vay.";
+              "Khi có vay, nhập đủ kỳ hạn vay, tỷ lệ trả nợ trước hạn và ít nhất một ô lãi suất (cố định hoặc các năm tiếp theo) để xem kết quả.";
             resultRoiHintEl.textContent = "";
           } else {
             resultTopProfitRateHintEl.textContent =
@@ -1435,14 +2415,14 @@
         const brokerFee = 0.01 * salePrice;
         const doanhThuThue = monthlyRent * H;
 
-        if (!termInvalid) {
+        if (!loanCalcBlocked) {
           loiNhuan =
             salePrice +
             doanhThuThue -
             (purchasePrice + interestH + feeEarly + taxTncn + brokerFee);
         }
 
-        if (termInvalid) {
+        if (loanCalcBlocked) {
           resultTopProfitRateEl.textContent = "—";
           resultTopProfitRateEl.className = ddBase + "text-slate-200";
           resultRoiAnnualEl.textContent = "—";
@@ -1458,6 +2438,9 @@
             } else {
               resultTopProfitRateEl.className = ddBase + "text-slate-200";
             }
+          } else if (chuaNhapDuToiThieu) {
+            resultTopProfitRateEl.textContent = `${formatViVnAmount(0)} %`;
+            resultTopProfitRateEl.className = ddBase + "text-slate-200";
           } else {
             resultTopProfitRateEl.textContent =
               "— (giá mua − gốc vay ≤ 0, không chia tỷ suất)";
@@ -1475,10 +2458,16 @@
         }
 
         const ddNum = "font-medium tabular-nums ";
-        resultYear1BreakdownEl.classList.remove("hidden");
-        resultInvBalanceEndEl.textContent = `${formatViVnAmount(balanceEnd)} VNĐ`;
+        if (loanCalcBlocked) {
+          resultYear1BreakdownEl.classList.add("hidden");
+        } else {
+          resultYear1BreakdownEl.classList.remove("hidden");
+        }
+        resultInvBalanceEndEl.textContent = loanCalcBlocked
+          ? "—"
+          : `${formatViVnAmount(balanceEnd)} VNĐ`;
         resultInvBalanceEndEl.className = ddNum + "text-slate-100";
-        if (termInvalid) {
+        if (loanCalcBlocked) {
           resultInvThuChiEl.textContent = "—";
           resultInvThuChiEl.className = ddNum + "text-slate-100";
         } else {
@@ -1491,15 +2480,21 @@
             resultInvThuChiEl.className = ddNum + "text-slate-100";
           }
         }
-        resultInvTotalRentEl.textContent = termInvalid
+        resultInvTotalRentEl.textContent = loanCalcBlocked
           ? "—"
           : `${formatViVnAmount(doanhThuThue)} VNĐ`;
         resultInvTotalRentEl.className = ddNum + "text-slate-100";
-        resultInvPrincipalPaidEl.textContent = `${formatViVnAmount(principalH)} VNĐ`;
+        resultInvPrincipalPaidEl.textContent = loanCalcBlocked
+          ? "—"
+          : `${formatViVnAmount(principalH)} VNĐ`;
         resultInvPrincipalPaidEl.className = ddNum + "text-slate-100";
-        resultInvInterestPaidEl.textContent = `${formatViVnAmount(interestH)} VNĐ`;
+        resultInvInterestPaidEl.textContent = loanCalcBlocked
+          ? "—"
+          : `${formatViVnAmount(interestH)} VNĐ`;
         resultInvInterestPaidEl.className = ddNum + "text-slate-100";
-        resultInvEarlyRepayFeeEl.textContent = `${formatViVnAmount(feeEarly)} VNĐ`;
+        resultInvEarlyRepayFeeEl.textContent = loanCalcBlocked
+          ? "—"
+          : `${formatViVnAmount(feeEarly)} VNĐ`;
         resultInvEarlyRepayFeeEl.className = ddNum + "text-slate-100";
         resultInvTaxTncnEl.textContent = `${formatViVnAmount(taxTncn)} VNĐ`;
         resultInvTaxTncnEl.className = ddNum + "text-slate-100";
@@ -1511,7 +2506,7 @@
 
         const visibleMonthCount = Math.min(12, fullSchedule.length);
         if (
-          !termInvalid &&
+          !loanCalcBlocked &&
           loanPrincipal > 0 &&
           fullSchedule.length > 0 &&
           visibleMonthCount > 0
@@ -1536,14 +2531,23 @@
 
         investorCalcAlertEl.classList.remove("hidden", ...alertThemeClasses);
 
-        if (termInvalid) {
+        if (loanCalcBlocked) {
           investorCalcAlertEl.classList.add(
             "text-amber-200",
             "bg-amber-500/10",
             "ring-amber-500/25",
           );
           investorCalcAlertEl.textContent =
-            "Vui lòng nhập kỳ hạn vay (số tháng hoặc số năm) để tính toán khi có gốc vay.";
+            "Khi có vay, vui lòng nhập đủ: " + loanValidation.issues.join("; ") + ".";
+        } else if (chuaNhapDuToiThieu) {
+          investorCalcAlertEl.classList.add(
+            "text-amber-200",
+            "bg-amber-500/10",
+            "ring-amber-500/25",
+          );
+          investorCalcAlertEl.textContent = userEnteredLimitCalc
+            ? "Cảnh báo: nhập giá mua dự án (VNĐ) để quy đổi hạn mức vay, rồi điền đủ các ô bắt buộc khi có vay."
+            : "Cảnh báo: vui lòng nhập giá mua, giá bán trước khi xem kết quả tính toán.";
         } else if (loiNhuan < 0) {
           investorCalcAlertEl.classList.add(
             "text-red-200",
@@ -1551,7 +2555,7 @@
             "ring-red-500/25",
           );
           investorCalcAlertEl.textContent =
-            "Cảnh báo: Lợi nhuận (theo thời gian đầu tư) đang âm. Hãy xem lại giá mua, giá bán, doanh thu cho thuê, lãi trả, phí trả nợ trước hạn, thuế TNCN hoặc phí môi giới.";
+            "Cảnh báo: Lợi nhuận đang âm.";
         } else if (loiNhuan > 0) {
           investorCalcAlertEl.classList.add(
             "text-emerald-200",
@@ -1610,7 +2614,7 @@
           body,
           startY: 35,
           styles: { fontSize: 8, cellPadding: 1.5 },
-          headStyles: { fillColor: [30, 41, 59], textColor: 255 },
+          headStyles: { fillColor: [6, 78, 59], textColor: 255 },
         });
         const safe = email.replace(/[^a-zA-Z0-9._@-]/g, "_").slice(0, 48);
         doc.save(`FineLand-loan-schedule-m1-to-m${monthCount}-${safe}.pdf`);
