@@ -889,9 +889,7 @@
                 Chỉ số theo thời gian đầu tư
               </h4>
               <p class="mt-2 text-xs leading-relaxed text-emerald-100/55">
-                “Chi phí khác” trong tư vấn thường gồm phí công chứng, quản lý… — ở mô hình demo này không có ô
-                riêng; các khoản điển hình đã phản ánh qua lãi vay, phí trả nợ trước hạn, thuế TNCN và phí môi giới
-                trong bảng dưới (bạn có thể tự cộng thêm ngoài bảng khi ra quyết định).
+                Kết quả đầu tư dự tính chưa gồm các chi phí khác thường gồm phí công chứng, quản lý…
               </p>
               <dl class="mt-4 text-sm text-slate-300">
                 <div class="grid gap-6 sm:grid-cols-2">
@@ -1055,20 +1053,14 @@
                 class="hidden bg-black/20 px-3 py-4 sm:px-4"
               >
                 <p class="text-sm text-emerald-100/75">
-                  Tải lịch trả gốc/lãi theo thời gian đầu tư (tối đa bằng kỳ hạn vay). Nhập email rồi chọn
-                  <strong class="font-semibold text-emerald-50/95">Nhận báo cáo PDF</strong> — thao tác phụ, không bắt buộc để xem kết quả.
-                  <span class="block mt-1.5 text-xs text-emerald-200/50">
-                    Bản demo: file PDF tải về máy. Phiên bản có backend sẽ gửi cùng nội dung tới email bạn nhập.
-                  </span>
+                  Nhập email để nhận <strong class="font-semibold text-emerald-50/95">lịch thanh toán đầy đủ</strong>.
                 </p>
                 <div class="mt-3 flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-3">
                   <div class="min-w-0 flex-1">
-                    <label for="loanSchedulePdfEmail" class="block text-xs font-medium text-emerald-200/60"
-                      >Email (tuỳ chọn)</label
-                    >
                     <input
                       id="loanSchedulePdfEmail"
                       type="email"
+                      aria-label="Ô nhập để nhận báo cáo PDF"
                       inputmode="email"
                       autocomplete="email"
                       placeholder="vidu@email.com"
@@ -1875,6 +1867,19 @@
         return { blocked: issues.length > 0, issues };
       }
 
+      const LOAN_BLOCKER_ISSUE_EARLY_REPAY = "tỷ lệ trả nợ trước hạn (có thể nhập 0)";
+      function loanIssuesForBannerAndAlert(issues) {
+        return issues.filter((x) => x !== LOAN_BLOCKER_ISSUE_EARLY_REPAY);
+      }
+
+      /** Hạn mức đã gõ (không rỗng) nhưng cả hai ô lãi suất đều trống — ẩn nhắc «còn thiếu…» / «vui lòng nhập đủ…». */
+      function loanLimitNonEmptyBothInterestFieldsEmpty() {
+        if (loanLimitValueInput.value.trim() === "") return false;
+        const bTrim = bankRateInput.value.trim();
+        const sTrim = subsequentAnnualRateInput.disabled ? "" : subsequentAnnualRateInput.value.trim();
+        return bTrim === "" && sTrim === "";
+      }
+
       /** Banner dưới nút tính — gọi khi bấm «Tính Toán Lời Lỗ» mà thiếu dữ liệu (kèm applyLoanContextHints). */
       function updateInvestorPrereqBanner() {
         const el = document.getElementById("investorLoanPrereqBanner");
@@ -1904,12 +1909,25 @@
         }
 
         const { blocked, issues } = validateInvestorLoanBlockers();
+        const issuesBanner = loanIssuesForBannerAndAlert(issues);
         if (loanPrincipal > 0 && blocked) {
+          if (loanLimitNonEmptyBothInterestFieldsEmpty()) {
+            el.textContent = "";
+            el.classList.add("hidden");
+            el.className = baseClass + " hidden";
+            return;
+          }
+          if (issuesBanner.length === 0) {
+            el.textContent = "";
+            el.classList.add("hidden");
+            el.className = baseClass + " hidden";
+            return;
+          }
           el.className = baseClass;
           el.classList.remove("hidden");
           el.textContent =
             "Nhắc — khi có vay, còn thiếu: " +
-            issues.join("; ") +
+            issuesBanner.join("; ") +
             ". Điền đủ rồi bấm «Tính Toán Lời Lỗ» để xem số liệu.";
           return;
         }
@@ -1968,7 +1986,7 @@
           if (n === null || !Number.isFinite(n) || n < 1) {
             setLoanCtxHint(
               loanTermFieldHintEl,
-              "Khi có vay: bắt buộc nhập kỳ hạn vay (chọn đơn vị năm hoặc tháng).",
+              "Nhập kỳ hạn vay theo tháng hoặc năm",
               true,
             );
           } else if (loanTermFieldHintEl.dataset.loanCtx === "1") {
@@ -1984,7 +2002,7 @@
           if (eBad) {
             setLoanCtxHint(
               earlyRepaymentFeeRateHintEl,
-              "Khi có vay: bắt buộc nhập tỷ lệ trả nợ trước hạn (nhập 0 nếu không áp dụng).",
+              "Nhập tỷ lệ trả nợ trước hạn (nhập 0 nếu không áp dụng).",
               true,
             );
           } else if (earlyRepaymentFeeRateHintEl.dataset.loanCtx === "1") {
@@ -2005,7 +2023,7 @@
           if (!hasB && !hasS) {
             setLoanCtxHint(
               bankAnnualRateHintEl,
-              "Khi có vay: nhập lãi suất cố định hoặc lãi suất các năm tiếp theo (ít nhất một ô).",
+              "Nhập lãi suất cố định hoặc lãi suất các năm tiếp theo.",
               true,
             );
           } else if (!hasB && hasS) {
@@ -2023,15 +2041,11 @@
           if (!hasB && !hasS) {
             setLoanCtxHint(
               subsequentAnnualRateHintEl,
-              "Khi có vay: nhập lãi suất cố định hoặc lãi suất các năm tiếp theo (ít nhất một ô).",
+              "Nhập lãi suất cố định hoặc lãi suất các năm tiếp theo.",
               true,
             );
           } else if (hasB && !hasS) {
-            setLoanCtxHint(
-              subsequentAnnualRateHintEl,
-              "Gợi ý: có thể để trống — hệ thống dùng bằng lãi suất cố định cho các năm tiếp theo.",
-              false,
-            );
+            setPctFieldHint(subsequentAnnualRateHintEl, "", false);
           } else if (subsequentAnnualRateHintEl.dataset.loanCtx === "1") {
             setPctFieldHint(subsequentAnnualRateHintEl, "", false);
           }
@@ -2047,11 +2061,7 @@
               false,
             );
           } else if (hasB && !fPositive) {
-            setLoanCtxHint(
-              fixedRateFieldHintEl,
-              "Gợi ý: để trống hoặc 0 — thời gian lãi cố định sẽ mặc định bằng kỳ hạn vay.",
-              false,
-            );
+            setPctFieldHint(fixedRateFieldHintEl, "", false);
           } else if (hasB && hasS && fPositive) {
             if (fixedRateFieldHintEl.dataset.loanCtx === "1") {
               setPctFieldHint(fixedRateFieldHintEl, "", false);
@@ -2133,7 +2143,7 @@
           ) {
             setLoanCtxHint(
               loanTermFieldHintEl,
-              "Khi có vay: bắt buộc nhập kỳ hạn vay (chọn đơn vị năm hoặc tháng).",
+              "Nhập kỳ hạn vay theo tháng hoặc năm.",
               true,
             );
           }
@@ -2148,7 +2158,7 @@
           ) {
             setLoanCtxHint(
               earlyRepaymentFeeRateHintEl,
-              "Khi có vay: bắt buộc nhập tỷ lệ trả nợ trước hạn (nhập 0 nếu không áp dụng).",
+              "Nhập tỷ lệ trả nợ trước hạn (nhập 0 nếu không áp dụng).",
               true,
             );
           }
@@ -2160,7 +2170,7 @@
             if (!hasB && !hasS) {
               setLoanCtxHint(
                 bankAnnualRateHintEl,
-                "Khi có vay: nhập lãi suất cố định hoặc lãi suất các năm tiếp theo (ít nhất một ô).",
+                "Nhập lãi suất cố định hoặc lãi suất các năm tiếp theo.",
                 true,
               );
             } else if (!hasB && hasS) {
@@ -2179,15 +2189,11 @@
             if (!hasB && !hasS) {
               setLoanCtxHint(
                 subsequentAnnualRateHintEl,
-                "Khi có vay: nhập lãi suất cố định hoặc lãi suất các năm tiếp theo (ít nhất một ô).",
+                "Nhập lãi suất cố định hoặc lãi suất các năm tiếp theo.",
                 true,
               );
             } else if (hasB && !hasS) {
-              setLoanCtxHint(
-                subsequentAnnualRateHintEl,
-                "Gợi ý: có thể để trống — hệ thống dùng bằng lãi suất cố định cho các năm tiếp theo.",
-                false,
-              );
+              setPctFieldHint(subsequentAnnualRateHintEl, "", false);
             }
           }
           return;
@@ -2204,11 +2210,7 @@
                 false,
               );
             } else if (hasB && !fPositive) {
-              setLoanCtxHint(
-                fixedRateFieldHintEl,
-                "Gợi ý: để trống hoặc 0 — thời gian lãi cố định sẽ mặc định bằng kỳ hạn vay.",
-                false,
-              );
+              setPctFieldHint(fixedRateFieldHintEl, "", false);
             }
           }
         }
@@ -2291,6 +2293,7 @@
       deepCalcBtn.addEventListener("click", () => {
         updatePercentInputWarnings();
         const purchasePrice = Math.max(0, parseViVnNumber(aptPurchaseInput.value) || 0);
+        const salePrice = Math.max(0, parseViVnNumber(expectedSalePriceInput.value) || 0);
         const monthlyRent = Math.max(0, parseViVnNumber(aptRentInput.value) || 0);
 
         const rawLoanLimit =
@@ -2309,7 +2312,8 @@
         const limitTrimCalc = loanLimitValueInput.value.trim();
         const userEnteredLimitCalc =
           limitTrimCalc !== "" && Number.isFinite(rawLoanLimit) && rawLoanLimit > 0;
-        const chuaNhapDuToiThieu = purchasePrice <= 0;
+        const thieuGiaMuaHoacBan = purchasePrice <= 0 || salePrice <= 0;
+        const ketQuaBiChan = loanCalcBlocked || thieuGiaMuaHoacBan;
         if (loanCalcBlocked || (userEnteredLimitCalc && purchasePrice <= 0)) {
           applyLoanContextHints();
           updateInvestorPrereqBanner();
@@ -2323,7 +2327,7 @@
         let r1 = 0;
         let r2 = 0;
 
-        if (!loanCalcBlocked && loanPrincipal > 0 && n !== null && n >= 1) {
+        if (!ketQuaBiChan && loanPrincipal > 0 && n !== null && n >= 1) {
           const bTrim = bankRateInput.value.trim();
           const sTrim = subsequentAnnualRateInput.disabled ? "" : subsequentAnnualRateInput.value.trim();
           const bankPct = bTrim === "" ? NaN : parseViVnPercent(bankRateInput.value);
@@ -2351,9 +2355,8 @@
 
         const H = readInvestmentHorizonMonths(n);
         const hPay =
-          loanPrincipal > 0 && !loanCalcBlocked && n !== null && n >= 1 ? Math.min(H, n) : 0;
+          loanPrincipal > 0 && !ketQuaBiChan && n !== null && n >= 1 ? Math.min(H, n) : 0;
 
-        const salePrice = Math.max(0, parseViVnNumber(expectedSalePriceInput.value) || 0);
         const earlyRepayPctRaw = parseViVnPercent(earlyRepaymentFeeRateInput.value);
         const earlyRepayPct =
           Number.isFinite(earlyRepayPctRaw) && earlyRepayPctRaw >= 0 ? earlyRepayPctRaw : 0;
@@ -2366,7 +2369,7 @@
          * Lợi nhuận: (giá bán + doanh thu cho thuê) − (giá mua + lãi + phí trước hạn + thuế + môi giới).
          * Lịch vay n tháng: tháng 1..tFixed r1, sau đó r2.
          */
-        let thuChi = loanCalcBlocked ? 0 : monthlyRent * H;
+        let thuChi = ketQuaBiChan ? 0 : monthlyRent * H;
         let loiNhuan = 0;
         let principalH = 0;
         let interestH = 0;
@@ -2374,11 +2377,11 @@
         let balanceEnd = 0;
 
         const hintTiSuat =
-          "Lợi nhuận ÷ (giá mua − gốc vay VNĐ). Nếu hạn mức nhập %, gốc vay được quy đổi sang VNĐ.";
+          "Lợi nhuận ÷ (giá mua − gốc vay VNĐ)";
         const hintLoiNhuan =
           "(Giá bán + doanh thu cho thuê) − (giá mua + lãi trả + phí trả nợ trước hạn + thuế TNCN + phí môi giới).";
 
-        if (!loanCalcBlocked && loanPrincipal > 0 && n !== null && n >= 1) {
+        if (!ketQuaBiChan && loanPrincipal > 0 && n !== null && n >= 1) {
           fullSchedule =
             mode === "declining"
               ? buildDecliningScheduleVariableRate(loanPrincipal, n, tFixed, r1, r2)
@@ -2402,6 +2405,9 @@
             resultTopProfitRateHintEl.textContent =
               "Khi có vay, nhập đủ kỳ hạn vay, tỷ lệ trả nợ trước hạn và ít nhất một ô lãi suất (cố định hoặc các năm tiếp theo) để xem kết quả.";
             resultRoiHintEl.textContent = "";
+          } else if (thieuGiaMuaHoacBan) {
+            resultTopProfitRateHintEl.textContent = hintTiSuat;
+            resultRoiHintEl.textContent = hintLoiNhuan;
           } else {
             resultTopProfitRateHintEl.textContent =
               loanPrincipal <= 0 ? hintTiSuat : "Nhập kỳ hạn vay hợp lệ để tính lịch trả.";
@@ -2415,14 +2421,14 @@
         const brokerFee = 0.01 * salePrice;
         const doanhThuThue = monthlyRent * H;
 
-        if (!loanCalcBlocked) {
+        if (!loanCalcBlocked && !thieuGiaMuaHoacBan) {
           loiNhuan =
             salePrice +
             doanhThuThue -
             (purchasePrice + interestH + feeEarly + taxTncn + brokerFee);
         }
 
-        if (loanCalcBlocked) {
+        if (ketQuaBiChan) {
           resultTopProfitRateEl.textContent = "—";
           resultTopProfitRateEl.className = ddBase + "text-slate-200";
           resultRoiAnnualEl.textContent = "—";
@@ -2438,9 +2444,6 @@
             } else {
               resultTopProfitRateEl.className = ddBase + "text-slate-200";
             }
-          } else if (chuaNhapDuToiThieu) {
-            resultTopProfitRateEl.textContent = `${formatViVnAmount(0)} %`;
-            resultTopProfitRateEl.className = ddBase + "text-slate-200";
           } else {
             resultTopProfitRateEl.textContent =
               "— (giá mua − gốc vay ≤ 0, không chia tỷ suất)";
@@ -2458,16 +2461,16 @@
         }
 
         const ddNum = "font-medium tabular-nums ";
-        if (loanCalcBlocked) {
+        if (ketQuaBiChan) {
           resultYear1BreakdownEl.classList.add("hidden");
         } else {
           resultYear1BreakdownEl.classList.remove("hidden");
         }
-        resultInvBalanceEndEl.textContent = loanCalcBlocked
+        resultInvBalanceEndEl.textContent = ketQuaBiChan
           ? "—"
           : `${formatViVnAmount(balanceEnd)} VNĐ`;
         resultInvBalanceEndEl.className = ddNum + "text-slate-100";
-        if (loanCalcBlocked) {
+        if (ketQuaBiChan) {
           resultInvThuChiEl.textContent = "—";
           resultInvThuChiEl.className = ddNum + "text-slate-100";
         } else {
@@ -2480,25 +2483,29 @@
             resultInvThuChiEl.className = ddNum + "text-slate-100";
           }
         }
-        resultInvTotalRentEl.textContent = loanCalcBlocked
+        resultInvTotalRentEl.textContent = ketQuaBiChan
           ? "—"
           : `${formatViVnAmount(doanhThuThue)} VNĐ`;
         resultInvTotalRentEl.className = ddNum + "text-slate-100";
-        resultInvPrincipalPaidEl.textContent = loanCalcBlocked
+        resultInvPrincipalPaidEl.textContent = ketQuaBiChan
           ? "—"
           : `${formatViVnAmount(principalH)} VNĐ`;
         resultInvPrincipalPaidEl.className = ddNum + "text-slate-100";
-        resultInvInterestPaidEl.textContent = loanCalcBlocked
+        resultInvInterestPaidEl.textContent = ketQuaBiChan
           ? "—"
           : `${formatViVnAmount(interestH)} VNĐ`;
         resultInvInterestPaidEl.className = ddNum + "text-slate-100";
-        resultInvEarlyRepayFeeEl.textContent = loanCalcBlocked
+        resultInvEarlyRepayFeeEl.textContent = ketQuaBiChan
           ? "—"
           : `${formatViVnAmount(feeEarly)} VNĐ`;
         resultInvEarlyRepayFeeEl.className = ddNum + "text-slate-100";
-        resultInvTaxTncnEl.textContent = `${formatViVnAmount(taxTncn)} VNĐ`;
+        resultInvTaxTncnEl.textContent = ketQuaBiChan
+          ? "—"
+          : `${formatViVnAmount(taxTncn)} VNĐ`;
         resultInvTaxTncnEl.className = ddNum + "text-slate-100";
-        resultInvBrokerFeeEl.textContent = `${formatViVnAmount(brokerFee)} VNĐ`;
+        resultInvBrokerFeeEl.textContent = ketQuaBiChan
+          ? "—"
+          : `${formatViVnAmount(brokerFee)} VNĐ`;
         resultInvBrokerFeeEl.className = ddNum + "text-slate-100";
 
         loanSchedulePdfStatusEl.classList.add("hidden");
@@ -2506,7 +2513,7 @@
 
         const visibleMonthCount = Math.min(12, fullSchedule.length);
         if (
-          !loanCalcBlocked &&
+          !ketQuaBiChan &&
           loanPrincipal > 0 &&
           fullSchedule.length > 0 &&
           visibleMonthCount > 0
@@ -2514,7 +2521,7 @@
           lastFullLoanSchedule = fullSchedule;
           lastLoanSchedulePdfMonthCount = hPay;
           renderLoanScheduleTable(fullSchedule.slice(0, visibleMonthCount));
-          loanScheduleCaptionEl.textContent = `Lịch thanh toán ngân hàng — ${visibleMonthCount} tháng đầu tiên (VNĐ, định dạng vi-VN)`;
+          loanScheduleCaptionEl.textContent = `Lịch thanh toán ngân hàng ${visibleMonthCount} tháng đầu tiên (VNĐ)`;
           loanScheduleWrapperEl.classList.remove("hidden");
           if (fullSchedule.length > 0 && hPay > 0) {
             loanSchedulePdfPanelEl.classList.remove("hidden");
@@ -2531,23 +2538,39 @@
 
         investorCalcAlertEl.classList.remove("hidden", ...alertThemeClasses);
 
-        if (loanCalcBlocked) {
+        if (userEnteredLimitCalc && purchasePrice <= 0) {
           investorCalcAlertEl.classList.add(
             "text-amber-200",
             "bg-amber-500/10",
             "ring-amber-500/25",
           );
           investorCalcAlertEl.textContent =
-            "Khi có vay, vui lòng nhập đủ: " + loanValidation.issues.join("; ") + ".";
-        } else if (chuaNhapDuToiThieu) {
+            "Cảnh báo: nhập giá mua dự án (VNĐ) để quy đổi hạn mức vay, rồi điền đủ các ô bắt buộc khi có vay.";
+        } else if (thieuGiaMuaHoacBan) {
           investorCalcAlertEl.classList.add(
             "text-amber-200",
             "bg-amber-500/10",
             "ring-amber-500/25",
           );
-          investorCalcAlertEl.textContent = userEnteredLimitCalc
-            ? "Cảnh báo: nhập giá mua dự án (VNĐ) để quy đổi hạn mức vay, rồi điền đủ các ô bắt buộc khi có vay."
-            : "Cảnh báo: vui lòng nhập giá mua, giá bán trước khi xem kết quả tính toán.";
+          investorCalcAlertEl.textContent =
+            "Nhập giá mua và giá bán trước khi xem kết quả tính toán.";
+        } else if (loanCalcBlocked) {
+          if (loanLimitNonEmptyBothInterestFieldsEmpty()) {
+            hideInvestorCalcAlert();
+          } else {
+            const issuesAlert = loanIssuesForBannerAndAlert(loanValidation.issues);
+            if (issuesAlert.length === 0) {
+              hideInvestorCalcAlert();
+            } else {
+              investorCalcAlertEl.classList.add(
+                "text-amber-200",
+                "bg-amber-500/10",
+                "ring-amber-500/25",
+              );
+              investorCalcAlertEl.textContent =
+                "Khi có vay, vui lòng nhập đủ: " + issuesAlert.join("; ") + ".";
+            }
+          }
         } else if (loiNhuan < 0) {
           investorCalcAlertEl.classList.add(
             "text-red-200",
@@ -2568,7 +2591,34 @@
         }
       });
 
-      function exportLoanSchedulePdf(email) {
+      const PDF_NOTO_SANS_TTF_URL =
+        "https://cdn.jsdelivr.net/gh/googlefonts/noto-fonts@main/hinted/ttf/NotoSans/NotoSans-Regular.ttf";
+      const PDF_NOTO_VFS_NAME = "NotoSans-Regular.ttf";
+      const PDF_NOTO_FAMILY = "NotoSans";
+      let pdfNotoSansBase64Cache = null;
+
+      function arrayBufferToBase64(buffer) {
+        const bytes = new Uint8Array(buffer);
+        const chunk = 0x8000;
+        let binary = "";
+        for (let i = 0; i < bytes.length; i += chunk) {
+          binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+        }
+        return btoa(binary);
+      }
+
+      async function ensurePdfNotoSansFont(doc) {
+        if (!pdfNotoSansBase64Cache) {
+          const res = await fetch(PDF_NOTO_SANS_TTF_URL);
+          if (!res.ok) throw new Error("font_fetch");
+          pdfNotoSansBase64Cache = arrayBufferToBase64(await res.arrayBuffer());
+        }
+        doc.addFileToVFS(PDF_NOTO_VFS_NAME, pdfNotoSansBase64Cache);
+        doc.addFont(PDF_NOTO_VFS_NAME, PDF_NOTO_FAMILY, "normal");
+        doc.setFont(PDF_NOTO_FAMILY, "normal");
+      }
+
+      async function exportLoanSchedulePdf(email) {
         const rows = lastFullLoanSchedule;
         const monthCount = Math.min(
           lastLoanSchedulePdfMonthCount > 0 ? lastLoanSchedulePdfMonthCount : rows.length,
@@ -2588,20 +2638,35 @@
           loanSchedulePdfStatusEl.classList.remove("hidden");
           return;
         }
+        loanSchedulePdfStatusEl.className = "mt-2 text-xs text-slate-400";
+        loanSchedulePdfStatusEl.textContent = "Đang tải font và tạo PDF…";
+        loanSchedulePdfStatusEl.classList.remove("hidden");
         const pdfRows = rows.slice(0, monthCount);
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
+        try {
+          await ensurePdfNotoSansFont(doc);
+        } catch {
+          loanSchedulePdfStatusEl.className = "mt-2 text-xs text-red-400";
+          loanSchedulePdfStatusEl.textContent =
+            "Không tải được font cho PDF (cần mạng lần đầu). Kiểm tra kết nối và thử lại.";
+          return;
+        }
         doc.setFontSize(13);
         doc.text(
-          "FineLand — Loan schedule: month 1 through investment exit (VNĐ, vi-VN format)",
+          "FineLand — Lịch trả nợ: từ tháng 1 đến kỳ kết thúc đầu tư (VNĐ).",
           14,
           14,
         );
         doc.setFontSize(9);
-        doc.text(`Months included: 1–${monthCount} (min(investment horizon, loan term))`, 14, 21);
-        doc.text(`Recipient email: ${email}`, 14, 26);
-        doc.text(`Generated: ${new Date().toISOString()}`, 14, 31);
-        const head = [["Month", "Principal", "Interest", "Total", "Balance end"]];
+        doc.text(
+          `Số tháng trong báo cáo: 1–${monthCount} (tối đa theo thời gian đầu tư và kỳ hạn vay)`,
+          14,
+          21,
+        );
+        doc.text(`Email nhận: ${email}`, 14, 26);
+        doc.text(`Tạo lúc: ${new Date().toLocaleString("vi-VN")}`, 14, 31);
+        const head = [["Tháng", "Gốc trả", "Lãi", "Tổng trả", "Dư nợ cuối kỳ"]];
         const body = pdfRows.map((r) => [
           String(r.month),
           formatViVnAmount(r.principal),
@@ -2613,11 +2678,21 @@
           head,
           body,
           startY: 35,
-          styles: { fontSize: 8, cellPadding: 1.5 },
-          headStyles: { fillColor: [6, 78, 59], textColor: 255 },
+          styles: {
+            font: PDF_NOTO_FAMILY,
+            fontStyle: "normal",
+            fontSize: 8,
+            cellPadding: 1.5,
+          },
+          headStyles: {
+            font: PDF_NOTO_FAMILY,
+            fontStyle: "normal",
+            fillColor: [6, 78, 59],
+            textColor: 255,
+          },
         });
         const safe = email.replace(/[^a-zA-Z0-9._@-]/g, "_").slice(0, 48);
-        doc.save(`FineLand-loan-schedule-m1-to-m${monthCount}-${safe}.pdf`);
+        doc.save(`FineLand-lich-tra-no-thang-1-${monthCount}-${safe}.pdf`);
         loanSchedulePdfStatusEl.className = "mt-2 text-xs text-emerald-400";
         loanSchedulePdfStatusEl.textContent = `Đã tạo PDF (${pdfRows.length} tháng, tháng 1–${monthCount}). Bản chính thức sẽ gửi file tới ${email}.`;
         loanSchedulePdfStatusEl.classList.remove("hidden");
@@ -2631,7 +2706,7 @@
           loanSchedulePdfStatusEl.classList.remove("hidden");
           return;
         }
-        exportLoanSchedulePdf(email);
+        void exportLoanSchedulePdf(email);
       });
     </script>
   </body>
