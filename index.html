@@ -242,16 +242,16 @@
 
           <div
             id="investor-step-1"
-            class="mt-8 space-y-6 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 p-4 sm:p-5"
+            class="mt-8 min-w-0 space-y-6 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 p-4 sm:p-5"
           >
             <div>
-              <p class="text-sm font-semibold uppercase tracking-wide text-emerald-300/80">Bước 1 · Nhập khoản đầu tư</p>
+              <p class="text-sm font-semibold text-emerald-50/95">Bước 1 · Nhập khoản đầu tư</p>
               <p class="mt-1 max-w-2xl text-sm leading-relaxed text-emerald-100/70">
                 Điền số liệu của dự án và kế hoạch đầu tư.
               </p>
             </div>
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+          <div class="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="aptPurchasePrice" class="block text-sm font-medium text-emerald-50/95">
                   Giá mua dự án
@@ -269,7 +269,7 @@
               </div>
               <p id="aptPurchaseFieldHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="aptPurchasePrice"
@@ -277,18 +277,18 @@
                   inputmode="decimal"
                   autocomplete="off"
                   placeholder="Ví dụ: 50.000.000"
-                  class="js-vn-number min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  class="js-vn-number min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                   aria-describedby="aptPurchaseFieldHint aptPurchasePriceSuffix"
                 />
                 <span
                   id="aptPurchasePriceSuffix"
-                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center border-l border-emerald-900/40 bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >VNĐ</span>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="aptMonthlyRent" class="block text-sm font-medium text-emerald-50/95">
                   Giá cho thuê dự kiến / tháng
@@ -306,7 +306,7 @@
               </div>
               <p class="mt-1 text-xs text-slate-500"></p>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="aptMonthlyRent"
@@ -314,18 +314,18 @@
                   inputmode="decimal"
                   autocomplete="off"
                   placeholder="Ví dụ: 15.000.000"
-                  class="js-vn-number min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  class="js-vn-number min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                   aria-describedby="aptMonthlyRentSuffix"
                 />
                 <span
                   id="aptMonthlyRentSuffix"
-                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center border-l border-emerald-900/40 bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >VNĐ</span>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="loanLimitValue" class="block text-sm font-medium text-emerald-50/95">Hạn mức vay</label>
                 <button
@@ -341,7 +341,7 @@
               </div>
               <p id="loanLimitFieldHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="loanLimitValue"
@@ -349,11 +349,11 @@
                   inputmode="decimal"
                   autocomplete="off"
                   placeholder="Ví dụ: 50 hoặc 50.000.000"
-                  class="js-vn-number min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  class="js-vn-number min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                   aria-describedby="loanLimitFieldHint"
                 />
                 <div
-                  class="relative flex shrink-0 items-stretch bg-[#050f0c]/90"
+                  class="relative flex min-w-[4.5rem] shrink-0 items-stretch border-l border-emerald-900/40 bg-[#050f0c]/90"
                 >
                   <select
                     id="loanLimitUnit"
@@ -396,8 +396,8 @@
             Lãi suất cố định (bankAnnualRate) áp trong Thời gian lãi suất cố định (tháng, tối đa bằng kỳ hạn vay).
             Phần còn lại của kỳ hạn vay dùng Lãi suất các năm tiếp theo (subsequentAnnualRate); nếu trống thì trùng lãi cố định.
           -->
-          <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+          <div class="mt-6 grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="bankAnnualRate" class="block text-sm font-medium text-emerald-50/95">Lãi suất cố định</label>
                 <button
@@ -413,7 +413,7 @@
               </div>
               <p id="bankAnnualRateHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="bankAnnualRate"
@@ -421,18 +421,18 @@
                   inputmode="decimal"
                   autocomplete="off"
                   placeholder="Ví dụ: 10,5"
-                  class="js-vn-number js-vn-percent min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  class="js-vn-number js-vn-percent min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                   aria-describedby="bankAnnualRateHint bankAnnualRateSuffix"
                 />
                 <span
                   id="bankAnnualRateSuffix"
-                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center border-l border-emerald-900/40 bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >%</span>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="fixedRateTermValue" class="block text-sm font-medium text-emerald-50/95">Thời gian lãi suất cố định</label>
                 <button
@@ -448,7 +448,7 @@
               </div>
               <p id="fixedRateFieldHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="fixedRateTermValue"
@@ -456,11 +456,11 @@
                   inputmode="numeric"
                   autocomplete="off"
                   placeholder="Ví dụ: 5"
-                  class="js-vn-number js-vn-term min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  class="js-vn-number js-vn-term min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                   aria-describedby="fixedRateFieldHint"
                 />
                 <div
-                  class="relative flex shrink-0 items-stretch bg-[#050f0c]/90"
+                  class="relative flex min-w-[5.25rem] shrink-0 items-stretch border-l border-emerald-900/40 bg-[#050f0c]/90"
                 >
                   <select
                     id="fixedRateTermUnit"
@@ -498,7 +498,7 @@
               </div>
             </div>
 
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5 sm:col-span-2 xl:col-span-1">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5 sm:col-span-2 xl:col-span-1">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="subsequentAnnualRate" class="block text-sm font-medium text-emerald-50/95">Lãi suất các năm tiếp theo</label>
                 <button
@@ -514,7 +514,7 @@
               </div>
               <p id="subsequentAnnualRateHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="subsequentAnnualRate"
@@ -522,20 +522,20 @@
                   inputmode="decimal"
                   autocomplete="off"
                   placeholder="Ví dụ: 12"
-                  class="js-vn-number js-vn-percent min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50"
+                  class="js-vn-number js-vn-percent min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50"
                   aria-describedby="subsequentAnnualRateHint subsequentAnnualRateSuffix"
                 />
                 <span
                   id="subsequentAnnualRateSuffix"
-                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex shrink-0 items-center border-l border-emerald-900/40 bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >%</span>
               </div>
             </div>
           </div>
 
-          <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+          <div class="mt-4 grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="loanTermValue" class="block text-sm font-medium text-emerald-50/95">Kỳ hạn vay</label>
                 <button
@@ -555,7 +555,7 @@
                 Trong công thức, n là số tháng. Chọn tháng hoặc năm ở góc phải — năm được quy đổi ×12 khi tính (tối đa 50 năm / 600 tháng).
               -->
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="loanTermValue"
@@ -563,11 +563,11 @@
                   inputmode="numeric"
                   autocomplete="off"
                   placeholder="Ví dụ: 240 (bắt buộc khi có vay)"
-                  class="js-vn-number js-vn-term min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  class="js-vn-number js-vn-term min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                   aria-describedby="loanTermFieldHint"
                 />
                 <div
-                  class="relative flex shrink-0 items-stretch bg-[#050f0c]/90"
+                  class="relative flex min-w-[5.5rem] shrink-0 items-stretch border-l border-emerald-900/40 bg-[#050f0c]/90"
                 >
                   <select
                     id="loanTermUnit"
@@ -604,7 +604,7 @@
                 </div>
               </div>
             </div>
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5 sm:col-span-2 lg:col-span-2">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5 sm:col-span-2 lg:col-span-2">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="loanRepaymentMode" class="block text-sm font-medium text-emerald-50/95">Phương thức trả nợ</label>
                 <button
@@ -619,11 +619,11 @@
                 </button>
               </div>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <select
                   id="loanRepaymentMode"
-                  class="min-w-0 flex-1 cursor-pointer appearance-none border-0 bg-transparent py-2.5 pl-3 pr-2 text-sm font-medium text-slate-100 outline-none focus:outline-none focus:ring-0"
+                  class="min-w-0 w-full flex-1 basis-0 cursor-pointer appearance-none border-0 bg-transparent py-2.5 pl-3 pr-2 text-left text-sm font-medium leading-snug text-slate-100 outline-none focus:outline-none focus:ring-0"
                 >
                   <option class="text-sm" value="annuity">
                     Annuity: Trả gốc và lãi cố định hàng tháng.
@@ -633,7 +633,7 @@
                   </option>
                 </select>
                 <span
-                  class="pointer-events-none flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm leading-none text-slate-200"
+                  class="pointer-events-none flex shrink-0 items-center self-stretch border-l border-emerald-900/40 bg-[#050f0c]/90 px-3 text-sm leading-none text-slate-200"
                   aria-hidden="true"
                 >
                   <svg
@@ -661,8 +661,8 @@
             Thời gian đầu tư dự kiến: mốc thực tế đầu tư / trả nợ / bán; trống thì = kỳ hạn vay.
             Giá bán dự kiến, Tỷ lệ trả nợ trước hạn: dùng trong chỉ số kết quả (phí trước hạn = tỷ lệ × dư nợ cuối kỳ).
           -->
-          <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+          <div class="mt-4 grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="investmentHorizonValue" class="block text-sm font-medium text-emerald-50/95">Thời gian đầu tư dự kiến</label>
                 <button
@@ -678,7 +678,7 @@
               </div>
               <p class="mt-1 text-xs text-slate-500"></p>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="investmentHorizonValue"
@@ -686,10 +686,10 @@
                   inputmode="numeric"
                   autocomplete="off"
                   placeholder="Ví dụ: 10 (để trống = kỳ hạn vay)"
-                  class="js-vn-number js-vn-term min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  class="js-vn-number js-vn-term min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                 />
                 <div
-                  class="relative flex shrink-0 items-stretch bg-[#050f0c]/90"
+                  class="relative flex min-w-[5.25rem] shrink-0 items-stretch border-l border-emerald-900/40 bg-[#050f0c]/90"
                 >
                   <select
                     id="investmentHorizonUnit"
@@ -727,7 +727,7 @@
               </div>
             </div>
 
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="expectedSalePrice" class="block text-sm font-medium text-emerald-50/95">Giá bán dự kiến</label>
                 <button
@@ -743,7 +743,7 @@
               </div>
               <p class="mt-1 text-xs text-slate-500"></p>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="expectedSalePrice"
@@ -751,18 +751,18 @@
                   inputmode="decimal"
                   autocomplete="off"
                   placeholder="Ví dụ: 50.000.000"
-                  class="js-vn-number min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  class="js-vn-number min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                   aria-describedby="expectedSalePriceSuffix"
                 />
                 <span
                   id="expectedSalePriceSuffix"
-                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex min-w-[3.25rem] shrink-0 items-center justify-center border-l border-emerald-900/40 bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >VNĐ</span>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-black/25 p-4 sm:p-5 sm:col-span-2 lg:col-span-1">
+            <div class="min-w-0 rounded-2xl bg-black/25 p-4 sm:p-5 sm:col-span-2 lg:col-span-1">
               <div class="flex flex-wrap items-start justify-between gap-2">
                 <label for="earlyRepaymentFeeRate" class="block text-sm font-medium text-emerald-50/95">Tỷ lệ trả nợ trước hạn</label>
                 <button
@@ -778,7 +778,7 @@
               </div>
               <p id="earlyRepaymentFeeRateHint" class="mt-1 text-xs text-slate-500" role="status"></p>
               <div
-                class="mt-3 flex min-h-[2.75rem] overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
+                class="mt-3 flex w-full min-w-0 min-h-[2.75rem] items-stretch overflow-hidden rounded-xl bg-[#071210]/90 ring-1 ring-emerald-900/50 focus-within:ring-2 focus-within:ring-emerald-400/55"
               >
                 <input
                   id="earlyRepaymentFeeRate"
@@ -786,12 +786,12 @@
                   inputmode="decimal"
                   autocomplete="off"
                   placeholder="Ví dụ: 2"
-                  class="js-vn-number js-vn-percent min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
+                  class="js-vn-number js-vn-percent min-w-0 flex-1 basis-0 border-0 bg-transparent px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-sm placeholder:text-slate-500"
                   aria-describedby="earlyRepaymentFeeRateHint earlyRepaymentFeeRateSuffix"
                 />
                 <span
                   id="earlyRepaymentFeeRateSuffix"
-                  class="flex shrink-0 items-center bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
+                  class="flex min-w-[2.75rem] shrink-0 items-center justify-center border-l border-emerald-900/40 bg-[#050f0c]/90 px-3 text-sm font-medium leading-none text-slate-200"
                   aria-hidden="true"
                   >%</span>
               </div>
@@ -801,9 +801,9 @@
 
           <div
             id="investor-step-2"
-            class="mt-8 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 p-4 sm:p-6"
+            class="mt-8 min-w-0 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 p-4 sm:p-6"
           >
-            <p class="text-sm font-semibold uppercase tracking-wide text-emerald-300/80">Bước 2 · Tính toán</p>
+            <p class="text-sm font-semibold text-emerald-50/95">Bước 2 · Tính toán</p>
             <p class="mt-1 max-w-2xl text-sm leading-relaxed text-emerald-100/75">
               Khi đã điền các ô ở bước 1, bấm nút dưới đây để xem kết quả ở bước 3.
             </p>
@@ -841,9 +841,9 @@
 
           <div
             id="investor-step-3"
-            class="mt-8 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 p-4 sm:p-6"
+            class="mt-8 min-w-0 rounded-2xl bg-gradient-to-r from-emerald-600/10 via-emerald-600/10 to-teal-600/10 p-4 sm:p-6"
           >
-            <p class="text-sm font-semibold uppercase tracking-wide text-emerald-300/80">Bước 3 · Kết quả &amp; So sánh</p>
+            <p class="text-sm font-semibold text-emerald-50/95">Bước 3 · Kết quả &amp; so sánh</p>
             <div
               id="deepCalcResults"
               class="mt-4"
